@@ -1321,4 +1321,22 @@ Prem-TB1-br2            8000.aa1efef8d8d9       no              vnet26
 
 #### Cleanup
 ```bash
+❯ ./launch_arcos.sh --tb Prem-TB1 --cleanup
+
+Parsing cli args
+    Arg: name: rtr2
+    Arg: tb: Prem-TB1
+    Arg: cleanup: 1
+
+Destroying VMs
+ -- VM Prem-TB1-rtr1
+Domain 'Prem-TB1-rtr1' has been undefined
+
+ -- VM Prem-TB1-rtr2
+Domain 'Prem-TB1-rtr2' has been undefined
+
+Removing sim_dir /space/prem/sim_dir/Prem-TB1
+Removing bridges
+
+Cleanup succeeded
 ```
