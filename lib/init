@@ -1,0 +1,79 @@
+# Debugs/ Errors
+set -e
+
+[ "$DEBUG" == 1 ] && debug() { echo "${FUNCNAME[1]}: $@"; } || debug () { :; }
+[ "$TRACE" == 1 ] && set -x
+
+reset_err_handlers() {
+    # Remove exit and error handler
+    trap '' ERR
+    trap '' EXIT
+}
+
+def_cleanup() {
+  if [ "$(type -t cleanup)" = "function" ]; then
+    cleanup || true
+  fi
+  reset_err_handlers
+}
+
+bash_exit() {
+  # Exit only if we are running non-interactively
+  [ "$SOURCED" = "1" ] && echo "Exiting ..." && set +e && return 0
+  [ -z "$PS1" ] && exit 1 || set +e
+}
+
+# Init color support
+ncolors=$(tput colors)
+if test -n "$ncolors" && test $ncolors -ge 8; then
+  GREEN='\033[0;32m'; RED='\033[0;31m'; PURPLE='\033[0;35m'; NC='\033[0m'
+  die() { def_cleanup; echo -e "\n${RED}$@${NC}\n"; bash_exit; }
+  warn() { echo -e "\n${PURPLE}$@${NC}\n"; }
+  step() { echo -e "\n${GREEN}$@${NC}"; }
+else
+  die() { def_cleanup; echo -e "\n$@\n"; bash_exit; }
+  warn() { echo -e "\n$@\n"; }
+  step() { echo -e "\n$@"; }
+fi
+
+# Init default vars
+size="24G"
+arch="amd64"
+ROOT=$WORKSPACE/disk
+
+proxy="http://127.0.0.1:3128/"
+pkgs=""
+pip_pkgs=""
+
+# Traceback
+traceback() {
+    # Hide the traceback() call.
+    local -i start=$(( ${1:-0} + 1 ))
+    local -i end=${#BASH_SOURCE[@]}
+    local -i i=0
+    local -i j=0
+
+    echo "Traceback (last called is first):"
+    for ((i=${start}; i < ${end}; i++)); do
+        j=$(( $i - 1 ))
+        local function="${FUNCNAME[$i]}"
+        local file="${BASH_SOURCE[$i]}"
+        local line="${BASH_LINENO[$j]}"
+        echo "     ${function}() in ${file}:${line}"
+    done
+}
+
+# Trap failures
+error() {
+    local _ec="$?"
+    local _cmd="${BASH_COMMAND:-unknown}"
+    die "The command '${_cmd}' exited with exit code '${_ec}'.\n$(traceback 1)"
+}
+
+# Init traps (only when not running under unit-test)
+if [ -z "$BATS_VERSION" ]; then
+    trap 'error' ERR
+    trap 'def_cleanup' EXIT
+fi
+
+# vim: set filetype=bash :

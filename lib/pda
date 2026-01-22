@@ -1,0 +1,51 @@
+# Parse dashed (cli) args
+pda::usage() {
+    echo -e "\nUsage:\n~~~~~~"
+    echo "    $(basename $1) "; shift
+    local arg rarg desc val
+    for arg in "$@"; do
+      IFS=: read arg desc val <<< $arg
+      [ -n "$desc" ] || desc="${arg/_/ }"
+      [ -n "$ALL_CAPS" ] && rarg="${arg^^}" || rarg="$arg"
+      [ -n "$val" ] || val="${!rarg}"
+      [ -n "$val" ] && desc="$desc=$val"
+      #echo; echo ~~ $arg ~~ $desc ~~ $rarg ~~ $val
+      echo "        [--$arg=<$desc>]"
+    done
+    echo
+}
+pda::example() {
+  echo -e "\nExamples:\n~~~~~~~~~"
+  local script=$(basename $1); shift
+  for arg in "$@"; do
+    echo "    $script $arg"
+  done
+}
+
+pda::parse_cli_args() {
+    local val var
+    # Print usage is needed
+    [ "$1" == "" ] && die "$(usage)"
+    grep -Eq -- '-h|--help' <<< "$@" && die "$(usage)"
+
+    step "Parsing cli args"
+    while  (( "$#" )); do
+        var=${1#--}; val=""
+        if [[ "$1" =~ ^'--'* ]]; then
+            shift
+
+            [ -n "$ALL_CAPS" ] && var="${var^^}"
+
+            while [ "$1" != "" ] && [[ ! "$1" =~ ^'--'* ]]; do
+              val="$val $1"
+              shift
+            done
+            [ "$val" == "" ] && val=1
+            read $var <<< "$val" || die "${FUNCNAME[0]}: Read failed"
+        fi
+        echo "    Arg: $var: ${!var}"
+    done
+    echo
+}
+
+# vim: set filetype=bash :
