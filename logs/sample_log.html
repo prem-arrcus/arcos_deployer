@@ -1,0 +1,1525 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+pre { white-space: pre-wrap; }
+.ef0,.f0 { color: #000000; } .eb0,.b0 { background-color: #000000; }
+.ef1,.f1 { color: #AA0000; } .eb1,.b1 { background-color: #AA0000; }
+.ef2,.f2 { color: #00AA00; } .eb2,.b2 { background-color: #00AA00; }
+.ef3,.f3 { color: #AA5500; } .eb3,.b3 { background-color: #AA5500; }
+.ef4,.f4 { color: #0000AA; } .eb4,.b4 { background-color: #0000AA; }
+.ef5,.f5 { color: #AA00AA; } .eb5,.b5 { background-color: #AA00AA; }
+.ef6,.f6 { color: #00AAAA; } .eb6,.b6 { background-color: #00AAAA; }
+.ef7,.f7 { color: #AAAAAA; } .eb7,.b7 { background-color: #AAAAAA; }
+.ef8, .f0 > .bold,.bold > .f0 { color: #555555; font-weight: normal; }
+.ef9, .f1 > .bold,.bold > .f1 { color: #FF5555; font-weight: normal; }
+.ef10,.f2 > .bold,.bold > .f2 { color: #55FF55; font-weight: normal; }
+.ef11,.f3 > .bold,.bold > .f3 { color: #FFFF55; font-weight: normal; }
+.ef12,.f4 > .bold,.bold > .f4 { color: #5555FF; font-weight: normal; }
+.ef13,.f5 > .bold,.bold > .f5 { color: #FF55FF; font-weight: normal; }
+.ef14,.f6 > .bold,.bold > .f6 { color: #55FFFF; font-weight: normal; }
+.ef15,.f7 > .bold,.bold > .f7 { color: #FFFFFF; font-weight: normal; }
+.eb8  { background-color: #555555; }
+.eb9  { background-color: #FF5555; }
+.eb10 { background-color: #55FF55; }
+.eb11 { background-color: #FFFF55; }
+.eb12 { background-color: #5555FF; }
+.eb13 { background-color: #FF55FF; }
+.eb14 { background-color: #55FFFF; }
+.eb15 { background-color: #FFFFFF; }
+.ef16 { color: #000000; } .eb16 { background-color: #000000; }
+.ef17 { color: #00005f; } .eb17 { background-color: #00005f; }
+.ef18 { color: #000087; } .eb18 { background-color: #000087; }
+.ef19 { color: #0000af; } .eb19 { background-color: #0000af; }
+.ef20 { color: #0000d7; } .eb20 { background-color: #0000d7; }
+.ef21 { color: #0000ff; } .eb21 { background-color: #0000ff; }
+.ef22 { color: #005f00; } .eb22 { background-color: #005f00; }
+.ef23 { color: #005f5f; } .eb23 { background-color: #005f5f; }
+.ef24 { color: #005f87; } .eb24 { background-color: #005f87; }
+.ef25 { color: #005faf; } .eb25 { background-color: #005faf; }
+.ef26 { color: #005fd7; } .eb26 { background-color: #005fd7; }
+.ef27 { color: #005fff; } .eb27 { background-color: #005fff; }
+.ef28 { color: #008700; } .eb28 { background-color: #008700; }
+.ef29 { color: #00875f; } .eb29 { background-color: #00875f; }
+.ef30 { color: #008787; } .eb30 { background-color: #008787; }
+.ef31 { color: #0087af; } .eb31 { background-color: #0087af; }
+.ef32 { color: #0087d7; } .eb32 { background-color: #0087d7; }
+.ef33 { color: #0087ff; } .eb33 { background-color: #0087ff; }
+.ef34 { color: #00af00; } .eb34 { background-color: #00af00; }
+.ef35 { color: #00af5f; } .eb35 { background-color: #00af5f; }
+.ef36 { color: #00af87; } .eb36 { background-color: #00af87; }
+.ef37 { color: #00afaf; } .eb37 { background-color: #00afaf; }
+.ef38 { color: #00afd7; } .eb38 { background-color: #00afd7; }
+.ef39 { color: #00afff; } .eb39 { background-color: #00afff; }
+.ef40 { color: #00d700; } .eb40 { background-color: #00d700; }
+.ef41 { color: #00d75f; } .eb41 { background-color: #00d75f; }
+.ef42 { color: #00d787; } .eb42 { background-color: #00d787; }
+.ef43 { color: #00d7af; } .eb43 { background-color: #00d7af; }
+.ef44 { color: #00d7d7; } .eb44 { background-color: #00d7d7; }
+.ef45 { color: #00d7ff; } .eb45 { background-color: #00d7ff; }
+.ef46 { color: #00ff00; } .eb46 { background-color: #00ff00; }
+.ef47 { color: #00ff5f; } .eb47 { background-color: #00ff5f; }
+.ef48 { color: #00ff87; } .eb48 { background-color: #00ff87; }
+.ef49 { color: #00ffaf; } .eb49 { background-color: #00ffaf; }
+.ef50 { color: #00ffd7; } .eb50 { background-color: #00ffd7; }
+.ef51 { color: #00ffff; } .eb51 { background-color: #00ffff; }
+.ef52 { color: #5f0000; } .eb52 { background-color: #5f0000; }
+.ef53 { color: #5f005f; } .eb53 { background-color: #5f005f; }
+.ef54 { color: #5f0087; } .eb54 { background-color: #5f0087; }
+.ef55 { color: #5f00af; } .eb55 { background-color: #5f00af; }
+.ef56 { color: #5f00d7; } .eb56 { background-color: #5f00d7; }
+.ef57 { color: #5f00ff; } .eb57 { background-color: #5f00ff; }
+.ef58 { color: #5f5f00; } .eb58 { background-color: #5f5f00; }
+.ef59 { color: #5f5f5f; } .eb59 { background-color: #5f5f5f; }
+.ef60 { color: #5f5f87; } .eb60 { background-color: #5f5f87; }
+.ef61 { color: #5f5faf; } .eb61 { background-color: #5f5faf; }
+.ef62 { color: #5f5fd7; } .eb62 { background-color: #5f5fd7; }
+.ef63 { color: #5f5fff; } .eb63 { background-color: #5f5fff; }
+.ef64 { color: #5f8700; } .eb64 { background-color: #5f8700; }
+.ef65 { color: #5f875f; } .eb65 { background-color: #5f875f; }
+.ef66 { color: #5f8787; } .eb66 { background-color: #5f8787; }
+.ef67 { color: #5f87af; } .eb67 { background-color: #5f87af; }
+.ef68 { color: #5f87d7; } .eb68 { background-color: #5f87d7; }
+.ef69 { color: #5f87ff; } .eb69 { background-color: #5f87ff; }
+.ef70 { color: #5faf00; } .eb70 { background-color: #5faf00; }
+.ef71 { color: #5faf5f; } .eb71 { background-color: #5faf5f; }
+.ef72 { color: #5faf87; } .eb72 { background-color: #5faf87; }
+.ef73 { color: #5fafaf; } .eb73 { background-color: #5fafaf; }
+.ef74 { color: #5fafd7; } .eb74 { background-color: #5fafd7; }
+.ef75 { color: #5fafff; } .eb75 { background-color: #5fafff; }
+.ef76 { color: #5fd700; } .eb76 { background-color: #5fd700; }
+.ef77 { color: #5fd75f; } .eb77 { background-color: #5fd75f; }
+.ef78 { color: #5fd787; } .eb78 { background-color: #5fd787; }
+.ef79 { color: #5fd7af; } .eb79 { background-color: #5fd7af; }
+.ef80 { color: #5fd7d7; } .eb80 { background-color: #5fd7d7; }
+.ef81 { color: #5fd7ff; } .eb81 { background-color: #5fd7ff; }
+.ef82 { color: #5fff00; } .eb82 { background-color: #5fff00; }
+.ef83 { color: #5fff5f; } .eb83 { background-color: #5fff5f; }
+.ef84 { color: #5fff87; } .eb84 { background-color: #5fff87; }
+.ef85 { color: #5fffaf; } .eb85 { background-color: #5fffaf; }
+.ef86 { color: #5fffd7; } .eb86 { background-color: #5fffd7; }
+.ef87 { color: #5fffff; } .eb87 { background-color: #5fffff; }
+.ef88 { color: #870000; } .eb88 { background-color: #870000; }
+.ef89 { color: #87005f; } .eb89 { background-color: #87005f; }
+.ef90 { color: #870087; } .eb90 { background-color: #870087; }
+.ef91 { color: #8700af; } .eb91 { background-color: #8700af; }
+.ef92 { color: #8700d7; } .eb92 { background-color: #8700d7; }
+.ef93 { color: #8700ff; } .eb93 { background-color: #8700ff; }
+.ef94 { color: #875f00; } .eb94 { background-color: #875f00; }
+.ef95 { color: #875f5f; } .eb95 { background-color: #875f5f; }
+.ef96 { color: #875f87; } .eb96 { background-color: #875f87; }
+.ef97 { color: #875faf; } .eb97 { background-color: #875faf; }
+.ef98 { color: #875fd7; } .eb98 { background-color: #875fd7; }
+.ef99 { color: #875fff; } .eb99 { background-color: #875fff; }
+.ef100 { color: #878700; } .eb100 { background-color: #878700; }
+.ef101 { color: #87875f; } .eb101 { background-color: #87875f; }
+.ef102 { color: #878787; } .eb102 { background-color: #878787; }
+.ef103 { color: #8787af; } .eb103 { background-color: #8787af; }
+.ef104 { color: #8787d7; } .eb104 { background-color: #8787d7; }
+.ef105 { color: #8787ff; } .eb105 { background-color: #8787ff; }
+.ef106 { color: #87af00; } .eb106 { background-color: #87af00; }
+.ef107 { color: #87af5f; } .eb107 { background-color: #87af5f; }
+.ef108 { color: #87af87; } .eb108 { background-color: #87af87; }
+.ef109 { color: #87afaf; } .eb109 { background-color: #87afaf; }
+.ef110 { color: #87afd7; } .eb110 { background-color: #87afd7; }
+.ef111 { color: #87afff; } .eb111 { background-color: #87afff; }
+.ef112 { color: #87d700; } .eb112 { background-color: #87d700; }
+.ef113 { color: #87d75f; } .eb113 { background-color: #87d75f; }
+.ef114 { color: #87d787; } .eb114 { background-color: #87d787; }
+.ef115 { color: #87d7af; } .eb115 { background-color: #87d7af; }
+.ef116 { color: #87d7d7; } .eb116 { background-color: #87d7d7; }
+.ef117 { color: #87d7ff; } .eb117 { background-color: #87d7ff; }
+.ef118 { color: #87ff00; } .eb118 { background-color: #87ff00; }
+.ef119 { color: #87ff5f; } .eb119 { background-color: #87ff5f; }
+.ef120 { color: #87ff87; } .eb120 { background-color: #87ff87; }
+.ef121 { color: #87ffaf; } .eb121 { background-color: #87ffaf; }
+.ef122 { color: #87ffd7; } .eb122 { background-color: #87ffd7; }
+.ef123 { color: #87ffff; } .eb123 { background-color: #87ffff; }
+.ef124 { color: #af0000; } .eb124 { background-color: #af0000; }
+.ef125 { color: #af005f; } .eb125 { background-color: #af005f; }
+.ef126 { color: #af0087; } .eb126 { background-color: #af0087; }
+.ef127 { color: #af00af; } .eb127 { background-color: #af00af; }
+.ef128 { color: #af00d7; } .eb128 { background-color: #af00d7; }
+.ef129 { color: #af00ff; } .eb129 { background-color: #af00ff; }
+.ef130 { color: #af5f00; } .eb130 { background-color: #af5f00; }
+.ef131 { color: #af5f5f; } .eb131 { background-color: #af5f5f; }
+.ef132 { color: #af5f87; } .eb132 { background-color: #af5f87; }
+.ef133 { color: #af5faf; } .eb133 { background-color: #af5faf; }
+.ef134 { color: #af5fd7; } .eb134 { background-color: #af5fd7; }
+.ef135 { color: #af5fff; } .eb135 { background-color: #af5fff; }
+.ef136 { color: #af8700; } .eb136 { background-color: #af8700; }
+.ef137 { color: #af875f; } .eb137 { background-color: #af875f; }
+.ef138 { color: #af8787; } .eb138 { background-color: #af8787; }
+.ef139 { color: #af87af; } .eb139 { background-color: #af87af; }
+.ef140 { color: #af87d7; } .eb140 { background-color: #af87d7; }
+.ef141 { color: #af87ff; } .eb141 { background-color: #af87ff; }
+.ef142 { color: #afaf00; } .eb142 { background-color: #afaf00; }
+.ef143 { color: #afaf5f; } .eb143 { background-color: #afaf5f; }
+.ef144 { color: #afaf87; } .eb144 { background-color: #afaf87; }
+.ef145 { color: #afafaf; } .eb145 { background-color: #afafaf; }
+.ef146 { color: #afafd7; } .eb146 { background-color: #afafd7; }
+.ef147 { color: #afafff; } .eb147 { background-color: #afafff; }
+.ef148 { color: #afd700; } .eb148 { background-color: #afd700; }
+.ef149 { color: #afd75f; } .eb149 { background-color: #afd75f; }
+.ef150 { color: #afd787; } .eb150 { background-color: #afd787; }
+.ef151 { color: #afd7af; } .eb151 { background-color: #afd7af; }
+.ef152 { color: #afd7d7; } .eb152 { background-color: #afd7d7; }
+.ef153 { color: #afd7ff; } .eb153 { background-color: #afd7ff; }
+.ef154 { color: #afff00; } .eb154 { background-color: #afff00; }
+.ef155 { color: #afff5f; } .eb155 { background-color: #afff5f; }
+.ef156 { color: #afff87; } .eb156 { background-color: #afff87; }
+.ef157 { color: #afffaf; } .eb157 { background-color: #afffaf; }
+.ef158 { color: #afffd7; } .eb158 { background-color: #afffd7; }
+.ef159 { color: #afffff; } .eb159 { background-color: #afffff; }
+.ef160 { color: #d70000; } .eb160 { background-color: #d70000; }
+.ef161 { color: #d7005f; } .eb161 { background-color: #d7005f; }
+.ef162 { color: #d70087; } .eb162 { background-color: #d70087; }
+.ef163 { color: #d700af; } .eb163 { background-color: #d700af; }
+.ef164 { color: #d700d7; } .eb164 { background-color: #d700d7; }
+.ef165 { color: #d700ff; } .eb165 { background-color: #d700ff; }
+.ef166 { color: #d75f00; } .eb166 { background-color: #d75f00; }
+.ef167 { color: #d75f5f; } .eb167 { background-color: #d75f5f; }
+.ef168 { color: #d75f87; } .eb168 { background-color: #d75f87; }
+.ef169 { color: #d75faf; } .eb169 { background-color: #d75faf; }
+.ef170 { color: #d75fd7; } .eb170 { background-color: #d75fd7; }
+.ef171 { color: #d75fff; } .eb171 { background-color: #d75fff; }
+.ef172 { color: #d78700; } .eb172 { background-color: #d78700; }
+.ef173 { color: #d7875f; } .eb173 { background-color: #d7875f; }
+.ef174 { color: #d78787; } .eb174 { background-color: #d78787; }
+.ef175 { color: #d787af; } .eb175 { background-color: #d787af; }
+.ef176 { color: #d787d7; } .eb176 { background-color: #d787d7; }
+.ef177 { color: #d787ff; } .eb177 { background-color: #d787ff; }
+.ef178 { color: #d7af00; } .eb178 { background-color: #d7af00; }
+.ef179 { color: #d7af5f; } .eb179 { background-color: #d7af5f; }
+.ef180 { color: #d7af87; } .eb180 { background-color: #d7af87; }
+.ef181 { color: #d7afaf; } .eb181 { background-color: #d7afaf; }
+.ef182 { color: #d7afd7; } .eb182 { background-color: #d7afd7; }
+.ef183 { color: #d7afff; } .eb183 { background-color: #d7afff; }
+.ef184 { color: #d7d700; } .eb184 { background-color: #d7d700; }
+.ef185 { color: #d7d75f; } .eb185 { background-color: #d7d75f; }
+.ef186 { color: #d7d787; } .eb186 { background-color: #d7d787; }
+.ef187 { color: #d7d7af; } .eb187 { background-color: #d7d7af; }
+.ef188 { color: #d7d7d7; } .eb188 { background-color: #d7d7d7; }
+.ef189 { color: #d7d7ff; } .eb189 { background-color: #d7d7ff; }
+.ef190 { color: #d7ff00; } .eb190 { background-color: #d7ff00; }
+.ef191 { color: #d7ff5f; } .eb191 { background-color: #d7ff5f; }
+.ef192 { color: #d7ff87; } .eb192 { background-color: #d7ff87; }
+.ef193 { color: #d7ffaf; } .eb193 { background-color: #d7ffaf; }
+.ef194 { color: #d7ffd7; } .eb194 { background-color: #d7ffd7; }
+.ef195 { color: #d7ffff; } .eb195 { background-color: #d7ffff; }
+.ef196 { color: #ff0000; } .eb196 { background-color: #ff0000; }
+.ef197 { color: #ff005f; } .eb197 { background-color: #ff005f; }
+.ef198 { color: #ff0087; } .eb198 { background-color: #ff0087; }
+.ef199 { color: #ff00af; } .eb199 { background-color: #ff00af; }
+.ef200 { color: #ff00d7; } .eb200 { background-color: #ff00d7; }
+.ef201 { color: #ff00ff; } .eb201 { background-color: #ff00ff; }
+.ef202 { color: #ff5f00; } .eb202 { background-color: #ff5f00; }
+.ef203 { color: #ff5f5f; } .eb203 { background-color: #ff5f5f; }
+.ef204 { color: #ff5f87; } .eb204 { background-color: #ff5f87; }
+.ef205 { color: #ff5faf; } .eb205 { background-color: #ff5faf; }
+.ef206 { color: #ff5fd7; } .eb206 { background-color: #ff5fd7; }
+.ef207 { color: #ff5fff; } .eb207 { background-color: #ff5fff; }
+.ef208 { color: #ff8700; } .eb208 { background-color: #ff8700; }
+.ef209 { color: #ff875f; } .eb209 { background-color: #ff875f; }
+.ef210 { color: #ff8787; } .eb210 { background-color: #ff8787; }
+.ef211 { color: #ff87af; } .eb211 { background-color: #ff87af; }
+.ef212 { color: #ff87d7; } .eb212 { background-color: #ff87d7; }
+.ef213 { color: #ff87ff; } .eb213 { background-color: #ff87ff; }
+.ef214 { color: #ffaf00; } .eb214 { background-color: #ffaf00; }
+.ef215 { color: #ffaf5f; } .eb215 { background-color: #ffaf5f; }
+.ef216 { color: #ffaf87; } .eb216 { background-color: #ffaf87; }
+.ef217 { color: #ffafaf; } .eb217 { background-color: #ffafaf; }
+.ef218 { color: #ffafd7; } .eb218 { background-color: #ffafd7; }
+.ef219 { color: #ffafff; } .eb219 { background-color: #ffafff; }
+.ef220 { color: #ffd700; } .eb220 { background-color: #ffd700; }
+.ef221 { color: #ffd75f; } .eb221 { background-color: #ffd75f; }
+.ef222 { color: #ffd787; } .eb222 { background-color: #ffd787; }
+.ef223 { color: #ffd7af; } .eb223 { background-color: #ffd7af; }
+.ef224 { color: #ffd7d7; } .eb224 { background-color: #ffd7d7; }
+.ef225 { color: #ffd7ff; } .eb225 { background-color: #ffd7ff; }
+.ef226 { color: #ffff00; } .eb226 { background-color: #ffff00; }
+.ef227 { color: #ffff5f; } .eb227 { background-color: #ffff5f; }
+.ef228 { color: #ffff87; } .eb228 { background-color: #ffff87; }
+.ef229 { color: #ffffaf; } .eb229 { background-color: #ffffaf; }
+.ef230 { color: #ffffd7; } .eb230 { background-color: #ffffd7; }
+.ef231 { color: #ffffff; } .eb231 { background-color: #ffffff; }
+.ef232 { color: #080808; } .eb232 { background-color: #080808; }
+.ef233 { color: #121212; } .eb233 { background-color: #121212; }
+.ef234 { color: #1c1c1c; } .eb234 { background-color: #1c1c1c; }
+.ef235 { color: #262626; } .eb235 { background-color: #262626; }
+.ef236 { color: #303030; } .eb236 { background-color: #303030; }
+.ef237 { color: #3a3a3a; } .eb237 { background-color: #3a3a3a; }
+.ef238 { color: #444444; } .eb238 { background-color: #444444; }
+.ef239 { color: #4e4e4e; } .eb239 { background-color: #4e4e4e; }
+.ef240 { color: #585858; } .eb240 { background-color: #585858; }
+.ef241 { color: #626262; } .eb241 { background-color: #626262; }
+.ef242 { color: #6c6c6c; } .eb242 { background-color: #6c6c6c; }
+.ef243 { color: #767676; } .eb243 { background-color: #767676; }
+.ef244 { color: #808080; } .eb244 { background-color: #808080; }
+.ef245 { color: #8a8a8a; } .eb245 { background-color: #8a8a8a; }
+.ef246 { color: #949494; } .eb246 { background-color: #949494; }
+.ef247 { color: #9e9e9e; } .eb247 { background-color: #9e9e9e; }
+.ef248 { color: #a8a8a8; } .eb248 { background-color: #a8a8a8; }
+.ef249 { color: #b2b2b2; } .eb249 { background-color: #b2b2b2; }
+.ef250 { color: #bcbcbc; } .eb250 { background-color: #bcbcbc; }
+.ef251 { color: #c6c6c6; } .eb251 { background-color: #c6c6c6; }
+.ef252 { color: #d0d0d0; } .eb252 { background-color: #d0d0d0; }
+.ef253 { color: #dadada; } .eb253 { background-color: #dadada; }
+.ef254 { color: #e4e4e4; } .eb254 { background-color: #e4e4e4; }
+.ef255 { color: #eeeeee; } .eb255 { background-color: #eeeeee; }
+
+.f9 { color: #000000; }
+.b9 { background-color: #FFFFFF; }
+.f9 > .bold,.bold > .f9, body.f9 > pre > .bold {
+  /* Bold is heavy black on white, or bright white
+     depending on the default background */
+  color: #000000;
+  font-weight: bold;
+}
+.reverse {
+  /* CSS does not support swapping fg and bg colours unfortunately,
+     so just hardcode something that will look OK on all backgrounds. */
+  color: #000000; background-color: #AAAAAA;
+}
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.blink { text-decoration: blink; }
+
+/* Avoid pixels between adjacent span elements.
+   Note this only works for lines less than 80 chars
+   where we close span elements on the same line.
+span { display: inline-block; }
+*/
+</style>
+</head>
+
+<body class="f9 b9">
+<pre>
+❯ ./launch_arcos.sh --tb Prem-TB1 --name rtr2 --disk arcos-sa-1767687415.e26acb74543a2701717a2db9dc4e65f48d36c23d.kvm.qcow2 --cpus 4 --mem 16384 --bridges br1,br2 | tee log
+<span class="f2">Parsing cli args</span>
+    Arg: tb: Prem-TB1
+    Arg: name: rtr2
+    Arg: disk: arcos-sa-1767687415.e26acb74543a2701717a2db9dc4e65f48d36c23d.kvm.qcow2
+    Arg: cpus: 4
+    Arg: mem: 16384
+    Arg: bridges: br1,br2
+
+Using Disk: /space/prem/arrcus/images/arcos-sa-1767687415.e26acb74543a2701717a2db9dc4e65f48d36c23d.kvm.qcow2
+
+Networks:
+  -- Bridge: Prem-TB1-br1
+  -- Bridge: Prem-TB1-br2
+Network args: --network network=ztp,model=virtio,driver.iommu=on  --network=bridge=Prem-TB1-br1,model=virtio,driver.iommu=on  --network=bridge=Prem-TB1-br2,model=virtio,driver.iommu=on 
+
+
+Starting install...
+Allocating 'rtr2.qcow2'                                     |  20 GB  00:00     
+Creating domain...                                          |         00:00     
+Connected to domain 'Prem-TB1-rtr2'
+Escape character is ^] (Ctrl + ])
+No EFI environment detected.
+early console in extract_kernel
+input_data: 0x00000000029a02ee
+input_len: 0x0000000000ba31be
+output: 0x0000000001000000
+output_len: 0x00000000024fd960
+kernel_total_size: 0x0000000002426000
+needed_size: 0x0000000002600000
+trampoline_32bit: 0x000000000009d000
+
+Decompressing Linux... Parsing ELF... done.
+Booting the kernel.
+[    0.000000] Linux version 6.1.55-arrcus (builder@aminor) (gcc (Debian 12.2.0-14+deb12u1) 12.2.0, GNU ld (GNU Binutils for Debian) 2.40) #1765152226 SMP PREEMPT_DYNAMIC Mon Dec  8 02:25:58 UTC 2025
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-6.1.55-arrcus root=UUID=43e44b67-14f3-4135-a531-33ab11c87f94 ro swiotlb=65536 console=ttyS0 earlyprintk=ttyS0 net.ifnames=0 biosdevname=0 crashkernel=384M-:128M
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdbfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffdc000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b0000000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000047fffffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000fd00000000-0x000000ffffffffff] reserved
+[    0.000000] printk: bootconsole [earlyser0] enabled
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] DMI: QEMU Standard PC (Q35 + ICH9, 2009), BIOS Arch Linux 1.17.0-2-2 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000001] kvm-clock: using sched offset of 937782985 cycles
+[    0.001012] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.004180] tsc: Detected 3293.820 MHz processor
+[    0.005516] last_pfn = 0x480000 max_arch_pfn = 0x400000000
+[    0.006627] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.007975] last_pfn = 0x7ffdc max_arch_pfn = 0x400000000
+[    0.010635] found SMP MP-table at [mem 0x000f6670-0x000f667f]
+[    0.011751] Using GB pages for direct mapping
+[    0.012847] RAMDISK: [mem 0x36e6f000-0x3772efff]
+[    0.013745] ACPI: Early table checksum verification disabled
+[    0.014844] ACPI: RSDP 0x00000000000F6630 000014 (v00 BOCHS )
+[    0.015950] ACPI: RSDT 0x000000007FFE2BF5 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.017626] ACPI: FACP 0x000000007FFE292D 0000F4 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.019289] ACPI: DSDT 0x000000007FFDFDC0 002B6D (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.020972] ACPI: FACS 0x000000007FFDFD80 000040
+[    0.021879] ACPI: APIC 0x000000007FFE2A21 000090 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.023528] ACPI: MCFG 0x000000007FFE2AB1 00003C (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.025188] ACPI: DMAR 0x000000007FFE2AED 0000E0 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.026850] ACPI: WAET 0x000000007FFE2BCD 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.028523] ACPI: Reserving FACP table memory at [mem 0x7ffe292d-0x7ffe2a20]
+[    0.029905] ACPI: Reserving DSDT table memory at [mem 0x7ffdfdc0-0x7ffe292c]
+[    0.031291] ACPI: Reserving FACS table memory at [mem 0x7ffdfd80-0x7ffdfdbf]
+[    0.032778] ACPI: Reserving APIC table memory at [mem 0x7ffe2a21-0x7ffe2ab0]
+[    0.034123] ACPI: Reserving MCFG table memory at [mem 0x7ffe2ab1-0x7ffe2aec]
+[    0.035482] ACPI: Reserving DMAR table memory at [mem 0x7ffe2aed-0x7ffe2bcc]
+[    0.036836] ACPI: Reserving WAET table memory at [mem 0x7ffe2bcd-0x7ffe2bf4]
+[    0.038677] No NUMA configuration found
+[    0.039423] Faking a node at [mem 0x0000000000000000-0x000000047fffffff]
+[    0.040705] NODE_DATA(0) allocated [mem 0x47fffa000-0x47fffdfff]
+[    0.041892] Reserving 128MB of memory at 1904MB for crashkernel (System RAM: 16383MB)
+[    0.043427] Zone ranges:
+[    0.043919]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.045131]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.046335]   Normal   [mem 0x0000000100000000-0x000000047fffffff]
+[    0.047544] Movable zone start for each node
+[    0.048371] Early memory node ranges
+[    0.049058]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.050276]   node   0: [mem 0x0000000000100000-0x000000007ffdbfff]
+[    0.051497]   node   0: [mem 0x0000000100000000-0x000000047fffffff]
+[    0.052705] Initmem setup node 0 [mem 0x0000000000001000-0x000000047fffffff]
+[    0.054187] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.054206] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.084138] On node 0, zone Normal: 36 pages in unavailable ranges
+[    0.088230] ACPI: PM-Timer IO Port: 0x608
+[    0.090204] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.091403] IOAPIC[0]: apic_id 0, version 32, address 0xfec00000, GSI 0-23
+[    0.092765] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.094004] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.095285] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.096565] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.097888] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.099227] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.100479] TSC deadline timer available
+[    0.101261] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.102268] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.103767] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.105240] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.106728] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.108195] PM: hibernation: Registered nosave memory: [mem 0x7ffdc000-0x7fffffff]
+[    0.109698] PM: hibernation: Registered nosave memory: [mem 0x80000000-0xafffffff]
+[    0.111181] PM: hibernation: Registered nosave memory: [mem 0xb0000000-0xbfffffff]
+[    0.112673] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xfed1bfff]
+[    0.114153] PM: hibernation: Registered nosave memory: [mem 0xfed1c000-0xfed1ffff]
+[    0.115631] PM: hibernation: Registered nosave memory: [mem 0xfed20000-0xfeffbfff]
+[    0.117117] PM: hibernation: Registered nosave memory: [mem 0xfeffc000-0xfeffffff]
+[    0.118605] PM: hibernation: Registered nosave memory: [mem 0xff000000-0xfffbffff]
+[    0.120090] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.121589] [mem 0xc0000000-0xfed1bfff] available for PCI devices
+[    0.122782] Booting paravirtualized kernel on KVM
+[    0.123698] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.125737] setup_percpu: NR_CPUS:64 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.127379] percpu: Embedded 55 pages/cpu s186664 r8192 d30424 u524288
+[    0.128690] Fallback order for Node 0: 0 
+[    0.128691] Built 1 zonelists, mobility grouping on.  Total pages: 4128476
+[    0.130836] Policy zone: Normal
+[    0.131462] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.1.55-arrcus root=UUID=43e44b67-14f3-4135-a531-33ab11c87f94 ro swiotlb=65536 console=ttyS0 earlyprintk=ttyS0 net.ifnames=0 biosdevname=0 crashkernel=384M-:128M
+[    0.135333] Unknown kernel command line parameters &quot;BOOT_IMAGE=/boot/vmlinuz-6.1.55-arrcus biosdevname=0&quot;, will be passed to user space.
+[    0.138863] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.141098] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.142787] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.144134] software IO TLB: area num 4.
+[    0.183324] Memory: 16178580K/16776680K available (20493K kernel code, 3023K rwdata, 5156K rodata, 1880K init, 3084K bss, 597844K reserved, 0K cma-reserved)
+[    0.186140] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.188331] Dynamic Preempt: voluntary
+[    0.189218] rcu: Preemptible hierarchical RCU implementation.
+[    0.190362] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.191669] 	Trampoline variant of Tasks RCU enabled.
+[    0.192653] 	Tracing variant of Tasks RCU enabled.
+[    0.193586] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.195091] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.197362] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+[    0.198628] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.212182] Console: colour VGA+ 80x25
+[    0.212943] printk: console [ttyS0] enabled
+[    0.212943] printk: console [ttyS0] enabled
+[    0.214480] printk: bootconsole [earlyser0] disabled
+[    0.214480] printk: bootconsole [earlyser0] disabled
+[    0.216304] ACPI: Core revision 20220331
+[    0.217070] APIC: Switch to symmetric I/O mode setup
+[    0.217999] DMAR: Host address width 48
+[    0.218718] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    0.219804] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap d2008c222f0686 ecap f00f5a
+[    0.221310] DMAR-IR: IOAPIC id 0 under DRHD base  0xfed90000 IOMMU 0
+[    0.222505] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.225563] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.226583] x2apic enabled
+[    0.227118] Switched APIC routing to cluster x2apic.
+[    0.234129] tsc: Marking TSC unstable due to TSCs unsynchronized
+[    0.235300] Calibrating delay loop (skipped) preset value.. 6587.64 BogoMIPS (lpj=3293820)
+[    0.236296] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.236296] Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+[    0.236296] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+[    0.236296] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.236296] Spectre V2 : Mitigation: Retpolines
+[    0.236296] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.236296] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.236296] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.236296] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.236296] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.236296] Speculative Return Stack Overflow: Mitigation: safe RET
+[    0.236296] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.236296] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.236296] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.236296] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    0.236296] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.236296] x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+[    0.236296] x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+[    0.236296] Freeing SMP alternatives memory: 56K
+[    0.236296] pid_max: default: 32768 minimum: 301
+[    0.236296] LSM: Security Framework initializing
+[    0.236296] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.236296] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.236296] smpboot: CPU0: AMD EPYC-Milan Processor (family: 0x19, model: 0x1, stepping: 0x1)
+[    0.236360] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.237300] cblist_init_generic: Setting shift to 2 and lim to 1.
+[    0.238313] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.239300] cblist_init_generic: Setting shift to 2 and lim to 1.
+[    0.240313] Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+[    0.241302] ... version:                0
+[    0.242067] ... bit width:              48
+[    0.242299] ... generic registers:      6
+[    0.243061] ... value mask:             0000ffffffffffff
+[    0.243299] ... max period:             00007fffffffffff
+[    0.244299] ... fixed-purpose events:   0
+[    0.245056] ... event mask:             000000000000003f
+[    0.245369] signal: max sigframe size: 3376
+[    0.246172] rcu: Hierarchical SRCU implementation.
+[    0.246299] rcu: 	Max phase no-delay instances is 400.
+[    0.247393] smp: Bringing up secondary CPUs ...
+[    0.248328] x86: Booting SMP configuration:
+[    0.249125] .... node  #0, CPUs:      #1 #2 #3
+[    0.250392] smp: Brought up 1 node, 4 CPUs
+[    0.252087] smpboot: Max logical packages: 4
+[    0.252300] smpboot: Total of 4 processors activated (26350.56 BogoMIPS)
+[    0.253649] devtmpfs: initialized
+[    0.254535] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.255302] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.256324] pinctrl core: initialized pinctrl subsystem
+[    0.257433] PM: RTC time: 18:59:42, date: 2026-01-22
+[    0.258546] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.259351] audit: initializing netlink subsys (disabled)
+[    0.260327] audit: type=2000 audit(1769108382.787:1): state=initialized audit_enabled=0 res=1
+[    0.260351] thermal_sys: Registered thermal governor 'step_wise'
+[    0.261300] thermal_sys: Registered thermal governor 'user_space'
+[    0.262320] cpuidle: using governor menu
+[    0.265115] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.265420] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xb0000000-0xbfffffff] (base 0xb0000000)
+[    0.266301] PCI: MMCONFIG at [mem 0xb0000000-0xbfffffff] reserved in E820
+[    0.267307] PCI: Using configuration type 1 for base access
+[    0.269663] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.297335] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.298300] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.300500] ACPI: Added _OSI(Module Device)
+[    0.301127] ACPI: Added _OSI(Processor Device)
+[    0.301301] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.302200] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.303945] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.326532] ACPI: Interpreter enabled
+[    0.327306] ACPI: PM: (supports S0 S5)
+[    0.328081] ACPI: Using IOAPIC for interrupt routing
+[    0.329316] PCI: Using host bridge windows from ACPI; if necessary, use &quot;pci=nocrs&quot; and report a bug
+[    0.330300] PCI: Using E820 reservations for host bridge windows
+[    0.331375] ACPI: Enabled 2 GPEs in block 00 to 3F
+[    0.335025] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.335303] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    0.337342] acpi PNP0A08:00: _OSC: platform does not support [LTR]
+[    0.338338] acpi PNP0A08:00: _OSC: OS now controls [PME AER PCIeCapability]
+[    0.340676] PCI host bridge to bus 0000:00
+[    0.341300] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.342300] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.344300] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.345300] pci_bus 0000:00: root bus resource [mem 0x80000000-0xafffffff window]
+[    0.347301] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[    0.348300] pci_bus 0000:00: root bus resource [mem 0xc000000000-0xc7ffffffff window]
+[    0.349301] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.350378] pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000
+[    0.353007] pci 0000:00:01.0: [1234:1111] type 00 class 0x030000
+[    0.358306] pci 0000:00:01.0: reg 0x10: [mem 0xfb000000-0xfbffffff pref]
+[    0.369306] pci 0000:00:01.0: reg 0x18: [mem 0xfea10000-0xfea10fff]
+[    0.385310] pci 0000:00:01.0: reg 0x30: [mem 0xfea00000-0xfea0ffff pref]
+[    0.386391] pci 0000:00:01.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.388608] pci 0000:00:02.0: [1b36:000c] type 01 class 0x060400
+[    0.392302] pci 0000:00:02.0: reg 0x10: [mem 0xfea11000-0xfea11fff]
+[    0.399438] pci 0000:00:02.0: enabling Extended Tags
+[    0.401460] pci 0000:00:02.1: [1b36:000c] type 01 class 0x060400
+[    0.406301] pci 0000:00:02.1: reg 0x10: [mem 0xfea12000-0xfea12fff]
+[    0.412438] pci 0000:00:02.1: enabling Extended Tags
+[    0.414466] pci 0000:00:02.2: [1b36:000c] type 01 class 0x060400
+[    0.419068] pci 0000:00:02.2: reg 0x10: [mem 0xfea13000-0xfea13fff]
+[    0.427396] pci 0000:00:02.2: enabling Extended Tags
+[    0.429460] pci 0000:00:02.3: [1b36:000c] type 01 class 0x060400
+[    0.433083] pci 0000:00:02.3: reg 0x10: [mem 0xfea14000-0xfea14fff]
+[    0.439430] pci 0000:00:02.3: enabling Extended Tags
+[    0.441452] pci 0000:00:02.4: [1b36:000c] type 01 class 0x060400
+[    0.445000] pci 0000:00:02.4: reg 0x10: [mem 0xfea15000-0xfea15fff]
+[    0.452154] pci 0000:00:02.4: enabling Extended Tags
+[    0.453453] pci 0000:00:02.5: [1b36:000c] type 01 class 0x060400
+[    0.456985] pci 0000:00:02.5: reg 0x10: [mem 0xfea16000-0xfea16fff]
+[    0.463432] pci 0000:00:02.5: enabling Extended Tags
+[    0.465453] pci 0000:00:02.6: [1b36:000c] type 01 class 0x060400
+[    0.469120] pci 0000:00:02.6: reg 0x10: [mem 0xfea17000-0xfea17fff]
+[    0.477786] pci 0000:00:02.6: enabling Extended Tags
+[    0.480451] pci 0000:00:02.7: [1b36:000c] type 01 class 0x060400
+[    0.484010] pci 0000:00:02.7: reg 0x10: [mem 0xfea18000-0xfea18fff]
+[    0.489150] pci 0000:00:02.7: enabling Extended Tags
+[    0.491459] pci 0000:00:03.0: [1b36:000c] type 01 class 0x060400
+[    0.495129] pci 0000:00:03.0: reg 0x10: [mem 0xfea19000-0xfea19fff]
+[    0.501151] pci 0000:00:03.0: enabling Extended Tags
+[    0.503462] pci 0000:00:03.1: [1b36:000c] type 01 class 0x060400
+[    0.505988] pci 0000:00:03.1: reg 0x10: [mem 0xfea1a000-0xfea1afff]
+[    0.511781] pci 0000:00:03.1: enabling Extended Tags
+[    0.514459] pci 0000:00:03.2: [1b36:000c] type 01 class 0x060400
+[    0.517020] pci 0000:00:03.2: reg 0x10: [mem 0xfea1b000-0xfea1bfff]
+[    0.524151] pci 0000:00:03.2: enabling Extended Tags
+[    0.526457] pci 0000:00:03.3: [1b36:000c] type 01 class 0x060400
+[    0.530000] pci 0000:00:03.3: reg 0x10: [mem 0xfea1c000-0xfea1cfff]
+[    0.536151] pci 0000:00:03.3: enabling Extended Tags
+[    0.538454] pci 0000:00:03.4: [1b36:000c] type 01 class 0x060400
+[    0.541040] pci 0000:00:03.4: reg 0x10: [mem 0xfea1d000-0xfea1dfff]
+[    0.548163] pci 0000:00:03.4: enabling Extended Tags
+[    0.550479] pci 0000:00:03.5: [1b36:000c] type 01 class 0x060400
+[    0.552994] pci 0000:00:03.5: reg 0x10: [mem 0xfea1e000-0xfea1efff]
+[    0.559149] pci 0000:00:03.5: enabling Extended Tags
+[    0.561801] pci 0000:00:1f.0: [8086:2918] type 00 class 0x060100
+[    0.564084] pci 0000:00:1f.0: quirk: [io  0x0600-0x067f] claimed by ICH6 ACPI/GPIO/TCO
+[    0.565672] pci 0000:00:1f.2: [8086:2922] type 00 class 0x010601
+[    0.576302] pci 0000:00:1f.2: reg 0x20: [io  0xc040-0xc05f]
+[    0.580301] pci 0000:00:1f.2: reg 0x24: [mem 0xfea1f000-0xfea1ffff]
+[    0.582898] pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500
+[    0.588716] pci 0000:00:1f.3: reg 0x20: [io  0x0700-0x073f]
+[    0.594561] acpiphp: Slot [0] registered
+[    0.595556] pci 0000:01:00.0: [1af4:1041] type 00 class 0x020000
+[    0.599301] pci 0000:01:00.0: reg 0x14: [mem 0xfe840000-0xfe840fff]
+[    0.605301] pci 0000:01:00.0: reg 0x20: [mem 0xc1a0000000-0xc1a0003fff 64bit pref]
+[    0.608301] pci 0000:01:00.0: reg 0x30: [mem 0xfe800000-0xfe83ffff pref]
+[    0.609379] pci 0000:01:00.0: enabling Extended Tags
+[    0.613765] pci 0000:00:02.0: PCI bridge to [bus 01]
+[    0.614352] pci 0000:00:02.0:   bridge window [mem 0xfe800000-0xfe9fffff]
+[    0.616353] pci 0000:00:02.0:   bridge window [mem 0xc1a0000000-0xc1bfffffff 64bit pref]
+[    0.618289] acpiphp: Slot [0-1] registered
+[    0.619542] pci 0000:02:00.0: [1af4:1041] type 00 class 0x020000
+[    0.623301] pci 0000:02:00.0: reg 0x14: [mem 0xfe640000-0xfe640fff]
+[    0.629301] pci 0000:02:00.0: reg 0x20: [mem 0xc180000000-0xc180003fff 64bit pref]
+[    0.632300] pci 0000:02:00.0: reg 0x30: [mem 0xfe600000-0xfe63ffff pref]
+[    0.633377] pci 0000:02:00.0: enabling Extended Tags
+[    0.637369] pci 0000:00:02.1: PCI bridge to [bus 02]
+[    0.638352] pci 0000:00:02.1:   bridge window [mem 0xfe600000-0xfe7fffff]
+[    0.640355] pci 0000:00:02.1:   bridge window [mem 0xc180000000-0xc19fffffff 64bit pref]
+[    0.642315] acpiphp: Slot [0-2] registered
+[    0.643352] pci 0000:03:00.0: [1af4:1041] type 00 class 0x020000
+[    0.647960] pci 0000:03:00.0: reg 0x14: [mem 0xfe440000-0xfe440fff]
+[    0.653301] pci 0000:03:00.0: reg 0x20: [mem 0xc160000000-0xc160003fff 64bit pref]
+[    0.659005] pci 0000:03:00.0: reg 0x30: [mem 0xfe400000-0xfe43ffff pref]
+[    0.660379] pci 0000:03:00.0: enabling Extended Tags
+[    0.663400] pci 0000:00:02.2: PCI bridge to [bus 03]
+[    0.664348] pci 0000:00:02.2:   bridge window [mem 0xfe400000-0xfe5fffff]
+[    0.665353] pci 0000:00:02.2:   bridge window [mem 0xc160000000-0xc17fffffff 64bit pref]
+[    0.668283] acpiphp: Slot [0-3] registered
+[    0.669551] pci 0000:04:00.0: [1af4:1048] type 00 class 0x010000
+[    0.673300] pci 0000:04:00.0: reg 0x14: [mem 0xfe200000-0xfe200fff]
+[    0.678301] pci 0000:04:00.0: reg 0x20: [mem 0xc140000000-0xc140003fff 64bit pref]
+[    0.683385] pci 0000:04:00.0: enabling Extended Tags
+[    0.686372] pci 0000:00:02.3: PCI bridge to [bus 04]
+[    0.687352] pci 0000:00:02.3:   bridge window [mem 0xfe200000-0xfe3fffff]
+[    0.688353] pci 0000:00:02.3:   bridge window [mem 0xc140000000-0xc15fffffff 64bit pref]
+[    0.691550] acpiphp: Slot [0-4] registered
+[    0.692550] pci 0000:05:00.0: [1af4:1043] type 00 class 0x078000
+[    0.696300] pci 0000:05:00.0: reg 0x14: [mem 0xfe000000-0xfe000fff]
+[    0.704300] pci 0000:05:00.0: reg 0x20: [mem 0xc120000000-0xc120003fff 64bit pref]
+[    0.706413] pci 0000:05:00.0: enabling Extended Tags
+[    0.710345] pci 0000:00:02.4: PCI bridge to [bus 05]
+[    0.711352] pci 0000:00:02.4:   bridge window [mem 0xfe000000-0xfe1fffff]
+[    0.712354] pci 0000:00:02.4:   bridge window [mem 0xc120000000-0xc13fffffff 64bit pref]
+[    0.715273] acpiphp: Slot [0-5] registered
+[    0.716473] pci 0000:06:00.0: [1b36:000d] type 00 class 0x0c0330
+[    0.718093] pci 0000:06:00.0: reg 0x10: [mem 0xfde00000-0xfde03fff 64bit]
+[    0.722737] pci 0000:06:00.0: enabling Extended Tags
+[    0.725738] pci 0000:00:02.5: PCI bridge to [bus 06]
+[    0.727351] pci 0000:00:02.5:   bridge window [mem 0xfde00000-0xfdffffff]
+[    0.728351] pci 0000:00:02.5:   bridge window [mem 0xc100000000-0xc11fffffff 64bit pref]
+[    0.731306] acpiphp: Slot [0-6] registered
+[    0.732332] pci 0000:07:00.0: [1af4:1042] type 00 class 0x010000
+[    0.737300] pci 0000:07:00.0: reg 0x14: [mem 0xfdc00000-0xfdc00fff]
+[    0.746303] pci 0000:07:00.0: reg 0x20: [mem 0xc0e0000000-0xc0e0003fff 64bit pref]
+[    0.753328] pci 0000:07:00.0: enabling Extended Tags
+[    0.756454] pci 0000:00:02.6: PCI bridge to [bus 07]
+[    0.757353] pci 0000:00:02.6:   bridge window [mem 0xfdc00000-0xfddfffff]
+[    0.759362] pci 0000:00:02.6:   bridge window [mem 0xc0e0000000-0xc0ffffffff 64bit pref]
+[    0.761281] acpiphp: Slot [0-7] registered
+[    0.762550] pci 0000:08:00.0: [1af4:1045] type 00 class 0x00ff00
+[    0.766301] pci 0000:08:00.0: reg 0x14: [mem 0xfda00000-0xfda00fff]
+[    0.773014] pci 0000:08:00.0: reg 0x20: [mem 0xc0c0000000-0xc0c0003fff 64bit pref]
+[    0.775384] pci 0000:08:00.0: enabling Extended Tags
+[    0.778358] pci 0000:00:02.7: PCI bridge to [bus 08]
+[    0.780353] pci 0000:00:02.7:   bridge window [mem 0xfda00000-0xfdbfffff]
+[    0.782351] pci 0000:00:02.7:   bridge window [mem 0xc0c0000000-0xc0dfffffff 64bit pref]
+[    0.784289] acpiphp: Slot [0-8] registered
+[    0.785550] pci 0000:09:00.0: [1af4:1044] type 00 class 0x00ff00
+[    0.789300] pci 0000:09:00.0: reg 0x14: [mem 0xfd800000-0xfd800fff]
+[    0.795300] pci 0000:09:00.0: reg 0x20: [mem 0xc0a0000000-0xc0a0003fff 64bit pref]
+[    0.798387] pci 0000:09:00.0: enabling Extended Tags
+[    0.802442] pci 0000:00:03.0: PCI bridge to [bus 09]
+[    0.803354] pci 0000:00:03.0:   bridge window [mem 0xfd800000-0xfd9fffff]
+[    0.804353] pci 0000:00:03.0:   bridge window [mem 0xc0a0000000-0xc0bfffffff 64bit pref]
+[    0.807370] acpiphp: Slot [0-9] registered
+[    0.808180] pci 0000:00:03.1: PCI bridge to [bus 0a]
+[    0.809349] pci 0000:00:03.1:   bridge window [mem 0xfd600000-0xfd7fffff]
+[    0.810353] pci 0000:00:03.1:   bridge window [mem 0xc080000000-0xc09fffffff 64bit pref]
+[    0.813571] acpiphp: Slot [0-10] registered
+[    0.814327] pci 0000:00:03.2: PCI bridge to [bus 0b]
+[    0.815337] pci 0000:00:03.2:   bridge window [mem 0xfd400000-0xfd5fffff]
+[    0.816353] pci 0000:00:03.2:   bridge window [mem 0xc060000000-0xc07fffffff 64bit pref]
+[    0.819258] acpiphp: Slot [0-11] registered
+[    0.820335] pci 0000:00:03.3: PCI bridge to [bus 0c]
+[    0.821336] pci 0000:00:03.3:   bridge window [mem 0xfd200000-0xfd3fffff]
+[    0.822353] pci 0000:00:03.3:   bridge window [mem 0xc040000000-0xc05fffffff 64bit pref]
+[    0.825261] acpiphp: Slot [0-12] registered
+[    0.826327] pci 0000:00:03.4: PCI bridge to [bus 0d]
+[    0.827340] pci 0000:00:03.4:   bridge window [mem 0xfd000000-0xfd1fffff]
+[    0.828353] pci 0000:00:03.4:   bridge window [mem 0xc020000000-0xc03fffffff 64bit pref]
+[    0.831244] acpiphp: Slot [0-13] registered
+[    0.831329] pci 0000:00:03.5: PCI bridge to [bus 0e]
+[    0.832353] pci 0000:00:03.5:   bridge window [mem 0xfce00000-0xfcffffff]
+[    0.834350] pci 0000:00:03.5:   bridge window [mem 0xc000000000-0xc01fffffff 64bit pref]
+[    0.849495] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.850405] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.851394] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.853394] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.854392] ACPI: PCI: Interrupt link LNKE configured for IRQ 10
+[    0.855393] ACPI: PCI: Interrupt link LNKF configured for IRQ 10
+[    0.857391] ACPI: PCI: Interrupt link LNKG configured for IRQ 11
+[    0.858408] ACPI: PCI: Interrupt link LNKH configured for IRQ 11
+[    0.859344] ACPI: PCI: Interrupt link GSIA configured for IRQ 16
+[    0.861310] ACPI: PCI: Interrupt link GSIB configured for IRQ 17
+[    0.862307] ACPI: PCI: Interrupt link GSIC configured for IRQ 18
+[    0.863307] ACPI: PCI: Interrupt link GSID configured for IRQ 19
+[    0.864307] ACPI: PCI: Interrupt link GSIE configured for IRQ 20
+[    0.865307] ACPI: PCI: Interrupt link GSIF configured for IRQ 21
+[    0.866308] ACPI: PCI: Interrupt link GSIG configured for IRQ 22
+[    0.867307] ACPI: PCI: Interrupt link GSIH configured for IRQ 23
+[    0.869555] iommu: Default domain type: Translated 
+[    0.870299] iommu: DMA domain TLB invalidation policy: lazy mode 
+[    0.871351] SCSI subsystem initialized
+[    0.872327] ACPI: bus type USB registered
+[    0.873313] usbcore: registered new interface driver usbfs
+[    0.874307] usbcore: registered new interface driver hub
+[    0.875307] usbcore: registered new device driver usb
+[    0.876301] pps_core: LinuxPPS API ver. 1 registered
+[    0.877240] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti &lt;giometti@linux.it&gt;
+[    0.878303] PTP clock support registered
+[    0.879305] EDAC MC: Ver: 3.0.0
+[    0.881329] Advanced Linux Sound Architecture Driver Initialized.
+[    0.882461] NetLabel: Initializing
+[    0.883142] NetLabel:  domain hash size = 128
+[    0.884300] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.885310] NetLabel:  unlabeled traffic allowed by default
+[    0.886317] mctp: management component transport protocol core
+[    0.887300] NET: Registered PF_MCTP protocol family
+[    0.888249] PCI: Using ACPI for IRQ routing
+[    0.995759] pci 0000:00:01.0: vgaarb: setting as boot VGA device
+[    0.996296] pci 0000:00:01.0: vgaarb: bridge control possible
+[    0.996296] pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.999303] vgaarb: loaded
+[    1.000299] clocksource: Switched to clocksource kvm-clock
+[    1.001465] VFS: Disk quotas dquot_6.6.0
+[    1.002226] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.003571] pnp: PnP ACPI init
+[    1.004267] system 00:04: [mem 0xb0000000-0xbfffffff window] has been reserved
+[    1.005870] pnp: PnP ACPI: found 5 devices
+[    1.014010] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.015719] NET: Registered PF_INET protocol family
+[    1.016954] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    1.020084] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    1.021743] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    1.023206] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    1.024931] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    1.026561] TCP: Hash tables configured (established 131072 bind 65536)
+[    1.027839] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    1.029141] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    1.030564] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.031766] RPC: Registered named UNIX socket transport module.
+[    1.032899] RPC: Registered udp transport module.
+[    1.033812] RPC: Registered tcp transport module.
+[    1.034710] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.036134] pci 0000:00:02.0: bridge window [io  0x1000-0x0fff] to [bus 01] add_size 1000
+[    1.037698] pci 0000:00:02.1: bridge window [io  0x1000-0x0fff] to [bus 02] add_size 1000
+[    1.039256] pci 0000:00:02.2: bridge window [io  0x1000-0x0fff] to [bus 03] add_size 1000
+[    1.040814] pci 0000:00:02.3: bridge window [io  0x1000-0x0fff] to [bus 04] add_size 1000
+[    1.042373] pci 0000:00:02.4: bridge window [io  0x1000-0x0fff] to [bus 05] add_size 1000
+[    1.043924] pci 0000:00:02.5: bridge window [io  0x1000-0x0fff] to [bus 06] add_size 1000
+[    1.045480] pci 0000:00:02.6: bridge window [io  0x1000-0x0fff] to [bus 07] add_size 1000
+[    1.047033] pci 0000:00:02.7: bridge window [io  0x1000-0x0fff] to [bus 08] add_size 1000
+[    1.048596] pci 0000:00:03.0: bridge window [io  0x1000-0x0fff] to [bus 09] add_size 1000
+[    1.050146] pci 0000:00:03.1: bridge window [io  0x1000-0x0fff] to [bus 0a] add_size 1000
+[    1.051700] pci 0000:00:03.2: bridge window [io  0x1000-0x0fff] to [bus 0b] add_size 1000
+[    1.053246] pci 0000:00:03.3: bridge window [io  0x1000-0x0fff] to [bus 0c] add_size 1000
+[    1.054815] pci 0000:00:03.4: bridge window [io  0x1000-0x0fff] to [bus 0d] add_size 1000
+[    1.056352] pci 0000:00:03.5: bridge window [io  0x1000-0x0fff] to [bus 0e] add_size 1000
+[    1.057919] pci 0000:00:02.0: BAR 13: assigned [io  0x1000-0x1fff]
+[    1.059112] pci 0000:00:02.1: BAR 13: assigned [io  0x2000-0x2fff]
+[    1.060285] pci 0000:00:02.2: BAR 13: assigned [io  0x3000-0x3fff]
+[    1.061466] pci 0000:00:02.3: BAR 13: assigned [io  0x4000-0x4fff]
+[    1.062770] pci 0000:00:02.4: BAR 13: assigned [io  0x5000-0x5fff]
+[    1.063948] pci 0000:00:02.5: BAR 13: assigned [io  0x6000-0x6fff]
+[    1.065124] pci 0000:00:02.6: BAR 13: assigned [io  0x7000-0x7fff]
+[    1.066295] pci 0000:00:02.7: BAR 13: assigned [io  0x8000-0x8fff]
+[    1.067470] pci 0000:00:03.0: BAR 13: assigned [io  0x9000-0x9fff]
+[    1.068654] pci 0000:00:03.1: BAR 13: assigned [io  0xa000-0xafff]
+[    1.069833] pci 0000:00:03.2: BAR 13: assigned [io  0xb000-0xbfff]
+[    1.071040] pci 0000:00:03.3: BAR 13: assigned [io  0xd000-0xdfff]
+[    1.072244] pci 0000:00:03.4: BAR 13: assigned [io  0xe000-0xefff]
+[    1.073436] pci 0000:00:03.5: BAR 13: assigned [io  0xf000-0xffff]
+[    1.074636] pci 0000:00:02.0: PCI bridge to [bus 01]
+[    1.075616] pci 0000:00:02.0:   bridge window [io  0x1000-0x1fff]
+[    1.079452] pci 0000:00:02.0:   bridge window [mem 0xfe800000-0xfe9fffff]
+[    1.082248] pci 0000:00:02.0:   bridge window [mem 0xc1a0000000-0xc1bfffffff 64bit pref]
+[    1.086847] pci 0000:00:02.1: PCI bridge to [bus 02]
+[    1.088619] pci 0000:00:02.1:   bridge window [io  0x2000-0x2fff]
+[    1.090865] pci 0000:00:02.1:   bridge window [mem 0xfe600000-0xfe7fffff]
+[    1.092971] pci 0000:00:02.1:   bridge window [mem 0xc180000000-0xc19fffffff 64bit pref]
+[    1.096809] pci 0000:00:02.2: PCI bridge to [bus 03]
+[    1.097793] pci 0000:00:02.2:   bridge window [io  0x3000-0x3fff]
+[    1.100877] pci 0000:00:02.2:   bridge window [mem 0xfe400000-0xfe5fffff]
+[    1.102929] pci 0000:00:02.2:   bridge window [mem 0xc160000000-0xc17fffffff 64bit pref]
+[    1.106164] pci 0000:00:02.3: PCI bridge to [bus 04]
+[    1.107132] pci 0000:00:02.3:   bridge window [io  0x4000-0x4fff]
+[    1.110923] pci 0000:00:02.3:   bridge window [mem 0xfe200000-0xfe3fffff]
+[    1.113200] pci 0000:00:02.3:   bridge window [mem 0xc140000000-0xc15fffffff 64bit pref]
+[    1.116091] pci 0000:00:02.4: PCI bridge to [bus 05]
+[    1.117208] pci 0000:00:02.4:   bridge window [io  0x5000-0x5fff]
+[    1.119498] pci 0000:00:02.4:   bridge window [mem 0xfe000000-0xfe1fffff]
+[    1.122332] pci 0000:00:02.4:   bridge window [mem 0xc120000000-0xc13fffffff 64bit pref]
+[    1.125534] pci 0000:00:02.5: PCI bridge to [bus 06]
+[    1.126503] pci 0000:00:02.5:   bridge window [io  0x6000-0x6fff]
+[    1.128735] pci 0000:00:02.5:   bridge window [mem 0xfde00000-0xfdffffff]
+[    1.130791] pci 0000:00:02.5:   bridge window [mem 0xc100000000-0xc11fffffff 64bit pref]
+[    1.134665] pci 0000:00:02.6: PCI bridge to [bus 07]
+[    1.135649] pci 0000:00:02.6:   bridge window [io  0x7000-0x7fff]
+[    1.137843] pci 0000:00:02.6:   bridge window [mem 0xfdc00000-0xfddfffff]
+[    1.143254] pci 0000:00:02.6:   bridge window [mem 0xc0e0000000-0xc0ffffffff 64bit pref]
+[    1.147166] pci 0000:00:02.7: PCI bridge to [bus 08]
+[    1.148147] pci 0000:00:02.7:   bridge window [io  0x8000-0x8fff]
+[    1.150372] pci 0000:00:02.7:   bridge window [mem 0xfda00000-0xfdbfffff]
+[    1.152572] pci 0000:00:02.7:   bridge window [mem 0xc0c0000000-0xc0dfffffff 64bit pref]
+[    1.157027] pci 0000:00:03.0: PCI bridge to [bus 09]
+[    1.157999] pci 0000:00:03.0:   bridge window [io  0x9000-0x9fff]
+[    1.160194] pci 0000:00:03.0:   bridge window [mem 0xfd800000-0xfd9fffff]
+[    1.162164] pci 0000:00:03.0:   bridge window [mem 0xc0a0000000-0xc0bfffffff 64bit pref]
+[    1.165174] pci 0000:00:03.1: PCI bridge to [bus 0a]
+[    1.166149] pci 0000:00:03.1:   bridge window [io  0xa000-0xafff]
+[    1.169032] pci 0000:00:03.1:   bridge window [mem 0xfd600000-0xfd7fffff]
+[    1.171057] pci 0000:00:03.1:   bridge window [mem 0xc080000000-0xc09fffffff 64bit pref]
+[    1.174148] pci 0000:00:03.2: PCI bridge to [bus 0b]
+[    1.175148] pci 0000:00:03.2:   bridge window [io  0xb000-0xbfff]
+[    1.178583] pci 0000:00:03.2:   bridge window [mem 0xfd400000-0xfd5fffff]
+[    1.180826] pci 0000:00:03.2:   bridge window [mem 0xc060000000-0xc07fffffff 64bit pref]
+[    1.183687] pci 0000:00:03.3: PCI bridge to [bus 0c]
+[    1.184667] pci 0000:00:03.3:   bridge window [io  0xd000-0xdfff]
+[    1.186876] pci 0000:00:03.3:   bridge window [mem 0xfd200000-0xfd3fffff]
+[    1.189067] pci 0000:00:03.3:   bridge window [mem 0xc040000000-0xc05fffffff 64bit pref]
+[    1.192901] pci 0000:00:03.4: PCI bridge to [bus 0d]
+[    1.193881] pci 0000:00:03.4:   bridge window [io  0xe000-0xefff]
+[    1.196005] pci 0000:00:03.4:   bridge window [mem 0xfd000000-0xfd1fffff]
+[    1.197976] pci 0000:00:03.4:   bridge window [mem 0xc020000000-0xc03fffffff 64bit pref]
+[    1.201761] pci 0000:00:03.5: PCI bridge to [bus 0e]
+[    1.202731] pci 0000:00:03.5:   bridge window [io  0xf000-0xffff]
+[    1.204877] pci 0000:00:03.5:   bridge window [mem 0xfce00000-0xfcffffff]
+[    1.206833] pci 0000:00:03.5:   bridge window [mem 0xc000000000-0xc01fffffff 64bit pref]
+[    1.209743] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.210927] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.212745] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.214077] pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]
+[    1.215407] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]
+[    1.216715] pci_bus 0000:00: resource 9 [mem 0xc000000000-0xc7ffffffff window]
+[    1.218094] pci_bus 0000:01: resource 0 [io  0x1000-0x1fff]
+[    1.219165] pci_bus 0000:01: resource 1 [mem 0xfe800000-0xfe9fffff]
+[    1.220382] pci_bus 0000:01: resource 2 [mem 0xc1a0000000-0xc1bfffffff 64bit pref]
+[    1.221815] pci_bus 0000:02: resource 0 [io  0x2000-0x2fff]
+[    1.222892] pci_bus 0000:02: resource 1 [mem 0xfe600000-0xfe7fffff]
+[    1.224089] pci_bus 0000:02: resource 2 [mem 0xc180000000-0xc19fffffff 64bit pref]
+[    1.225536] pci_bus 0000:03: resource 0 [io  0x3000-0x3fff]
+[    1.226726] pci_bus 0000:03: resource 1 [mem 0xfe400000-0xfe5fffff]
+[    1.227918] pci_bus 0000:03: resource 2 [mem 0xc160000000-0xc17fffffff 64bit pref]
+[    1.229384] pci_bus 0000:04: resource 0 [io  0x4000-0x4fff]
+[    1.230457] pci_bus 0000:04: resource 1 [mem 0xfe200000-0xfe3fffff]
+[    1.231669] pci_bus 0000:04: resource 2 [mem 0xc140000000-0xc15fffffff 64bit pref]
+[    1.233103] pci_bus 0000:05: resource 0 [io  0x5000-0x5fff]
+[    1.234170] pci_bus 0000:05: resource 1 [mem 0xfe000000-0xfe1fffff]
+[    1.235388] pci_bus 0000:05: resource 2 [mem 0xc120000000-0xc13fffffff 64bit pref]
+[    1.236841] pci_bus 0000:06: resource 0 [io  0x6000-0x6fff]
+[    1.237902] pci_bus 0000:06: resource 1 [mem 0xfde00000-0xfdffffff]
+[    1.239101] pci_bus 0000:06: resource 2 [mem 0xc100000000-0xc11fffffff 64bit pref]
+[    1.240533] pci_bus 0000:07: resource 0 [io  0x7000-0x7fff]
+[    1.241592] pci_bus 0000:07: resource 1 [mem 0xfdc00000-0xfddfffff]
+[    1.242781] pci_bus 0000:07: resource 2 [mem 0xc0e0000000-0xc0ffffffff 64bit pref]
+[    1.244225] pci_bus 0000:08: resource 0 [io  0x8000-0x8fff]
+[    1.245311] pci_bus 0000:08: resource 1 [mem 0xfda00000-0xfdbfffff]
+[    1.246497] pci_bus 0000:08: resource 2 [mem 0xc0c0000000-0xc0dfffffff 64bit pref]
+[    1.247913] pci_bus 0000:09: resource 0 [io  0x9000-0x9fff]
+[    1.248973] pci_bus 0000:09: resource 1 [mem 0xfd800000-0xfd9fffff]
+[    1.250181] pci_bus 0000:09: resource 2 [mem 0xc0a0000000-0xc0bfffffff 64bit pref]
+[    1.251615] pci_bus 0000:0a: resource 0 [io  0xa000-0xafff]
+[    1.252681] pci_bus 0000:0a: resource 1 [mem 0xfd600000-0xfd7fffff]
+[    1.253873] pci_bus 0000:0a: resource 2 [mem 0xc080000000-0xc09fffffff 64bit pref]
+[    1.255313] pci_bus 0000:0b: resource 0 [io  0xb000-0xbfff]
+[    1.256368] pci_bus 0000:0b: resource 1 [mem 0xfd400000-0xfd5fffff]
+[    1.257553] pci_bus 0000:0b: resource 2 [mem 0xc060000000-0xc07fffffff 64bit pref]
+[    1.258975] pci_bus 0000:0c: resource 0 [io  0xd000-0xdfff]
+[    1.260038] pci_bus 0000:0c: resource 1 [mem 0xfd200000-0xfd3fffff]
+[    1.261255] pci_bus 0000:0c: resource 2 [mem 0xc040000000-0xc05fffffff 64bit pref]
+[    1.263050] pci_bus 0000:0d: resource 0 [io  0xe000-0xefff]
+[    1.264126] pci_bus 0000:0d: resource 1 [mem 0xfd000000-0xfd1fffff]
+[    1.265321] pci_bus 0000:0d: resource 2 [mem 0xc020000000-0xc03fffffff 64bit pref]
+[    1.266759] pci_bus 0000:0e: resource 0 [io  0xf000-0xffff]
+[    1.267827] pci_bus 0000:0e: resource 1 [mem 0xfce00000-0xfcffffff]
+[    1.269041] pci_bus 0000:0e: resource 2 [mem 0xc000000000-0xc01fffffff 64bit pref]
+[    1.270999] ACPI: \_SB_.GSIG: Enabled at IRQ 22
+[    1.273466] PCI: CLS 0 bytes, default 64
+[    1.274267] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.274322] Unpacking initramfs...
+[    1.275506] software IO TLB: mapped [mem 0x000000006f000000-0x0000000077000000] (128MB)
+[    1.279215] Initialise system trusted keyrings
+[    1.280132] workingset: timestamp_bits=40 max_order=22 bucket_order=0
+[    1.282455] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.283995] NFS: Registering the id_resolver key type
+[    1.285075] Key type id_resolver registered
+[    1.285940] Key type id_legacy registered
+[    1.289480] Key type asymmetric registered
+[    1.290291] Asymmetric key parser 'x509' registered
+[    1.291293] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+[    1.292797] io scheduler mq-deadline registered
+[    1.293724] io scheduler kyber registered
+[    1.296746] pcieport 0000:00:02.0: PME: Signaling with IRQ 25
+[    1.298115] pcieport 0000:00:02.0: AER: enabled with IRQ 25
+[    1.302307] pcieport 0000:00:02.1: PME: Signaling with IRQ 26
+[    1.304379] pcieport 0000:00:02.1: AER: enabled with IRQ 26
+[    1.308318] pcieport 0000:00:02.2: PME: Signaling with IRQ 27
+[    1.309969] pcieport 0000:00:02.2: AER: enabled with IRQ 27
+[    1.315133] pcieport 0000:00:02.3: PME: Signaling with IRQ 28
+[    1.316735] pcieport 0000:00:02.3: AER: enabled with IRQ 28
+[    1.322519] pcieport 0000:00:02.4: PME: Signaling with IRQ 29
+[    1.323909] pcieport 0000:00:02.4: AER: enabled with IRQ 29
+[    1.327177] pcieport 0000:00:02.5: PME: Signaling with IRQ 30
+[    1.328832] pcieport 0000:00:02.5: AER: enabled with IRQ 30
+[    1.333238] pcieport 0000:00:02.6: PME: Signaling with IRQ 31
+[    1.335286] pcieport 0000:00:02.6: AER: enabled with IRQ 31
+[    1.339508] pcieport 0000:00:02.7: PME: Signaling with IRQ 32
+[    1.341223] pcieport 0000:00:02.7: AER: enabled with IRQ 32
+[    1.343096] ACPI: \_SB_.GSIH: Enabled at IRQ 23
+[    1.346355] pcieport 0000:00:03.0: PME: Signaling with IRQ 33
+[    1.347836] pcieport 0000:00:03.0: AER: enabled with IRQ 33
+[    1.351155] Freeing initrd memory: 8960K
+[    1.351971] pcieport 0000:00:03.1: PME: Signaling with IRQ 34
+[    1.354080] pcieport 0000:00:03.1: AER: enabled with IRQ 34
+[    1.357862] pcieport 0000:00:03.2: PME: Signaling with IRQ 35
+[    1.359502] pcieport 0000:00:03.2: AER: enabled with IRQ 35
+[    1.364392] pcieport 0000:00:03.3: PME: Signaling with IRQ 36
+[    1.366570] pcieport 0000:00:03.3: AER: enabled with IRQ 36
+[    1.370168] pcieport 0000:00:03.4: PME: Signaling with IRQ 37
+[    1.371577] pcieport 0000:00:03.4: AER: enabled with IRQ 37
+[    1.375610] pcieport 0000:00:03.5: PME: Signaling with IRQ 38
+[    1.377711] pcieport 0000:00:03.5: AER: enabled with IRQ 38
+[    1.379296] IPMI message handler: version 39.2
+[    1.380305] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.381765] ACPI: button: Power Button [PWRF]
+[    1.397762] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.399145] 00:00: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.420777] Non-volatile memory driver v1.3
+[    1.424054] Linux agpgart interface v0.103
+[    1.425328] random: crng init done
+[    1.425346] ACPI: bus type drm_connector registered
+[    1.427816] loop: module loaded
+[    1.428583] virtio_blk virtio5: 4/0/0 default/read/poll queues
+[    1.432847] virtio_blk virtio5: [vda] 41943040 512-byte logical blocks (21.5 GB/20.0 GiB)
+[    1.448546] GPT:Primary header thinks Alt. header is not at the end of the disk.
+[    1.450503] GPT:33554431 != 41943039
+[    1.451345] GPT:Alternate GPT header not at the end of the disk.
+[    1.452754] GPT:33554431 != 41943039
+[    1.453578] GPT: Use GNU Parted to correct GPT errors.
+[    1.454697]  vda: vda1 vda2
+[    1.455706] ACPI: \_SB_.GSIA: Enabled at IRQ 16
+[    1.457645] ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode
+[    1.459262] ahci 0000:00:1f.2: flags: 64bit ncq only 
+[    1.461721] scsi host0: ahci
+[    1.462381] scsi host1: ahci
+[    1.463034] scsi host2: ahci
+[    1.463679] scsi host3: ahci
+[    1.464305] scsi host4: ahci
+[    1.464955] scsi host5: ahci
+[    1.465576] ata1: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f100 irq 48
+[    1.467001] ata2: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f180 irq 48
+[    1.468447] ata3: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f200 irq 48
+[    1.469978] ata4: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f280 irq 48
+[    1.471512] ata5: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f300 irq 48
+[    1.473050] ata6: SATA max UDMA/133 abar m4096@0xfea1f000 port 0xfea1f380 irq 48
+[    1.475282] tun: Universal TUN/TAP device driver, 1.6
+[    1.493084] e100: Intel(R) PRO/100 Network Driver
+[    1.494045] e100: Copyright(c) 1999-2006 Intel Corporation
+[    1.495153] e1000: Intel(R) PRO/1000 Network Driver
+[    1.496089] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    1.497203] e1000e: Intel(R) PRO/1000 Network Driver
+[    1.498298] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.499556] igb: Intel(R) Gigabit Ethernet Network Driver
+[    1.500581] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.501637] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+[    1.502835] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    1.503968] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver
+[    1.505143] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    1.506298] ixgb: Intel(R) PRO/10GbE Network Driver
+[    1.507234] ixgb: Copyright (c) 1999-2008 Intel Corporation.
+[    1.508327] sky2: driver version 1.30
+[    1.509121] VFIO - User Level meta-driver version: 0.3
+[    1.511273] xhci_hcd 0000:06:00.0: xHCI Host Controller
+[    1.512316] xhci_hcd 0000:06:00.0: new USB bus registered, assigned bus number 1
+[    1.514161] xhci_hcd 0000:06:00.0: hcc params 0x00087001 hci version 0x100 quirks 0x0000000000000010
+[    1.520251] xhci_hcd 0000:06:00.0: xHCI Host Controller
+[    1.521372] xhci_hcd 0000:06:00.0: new USB bus registered, assigned bus number 2
+[    1.522793] xhci_hcd 0000:06:00.0: Host supports USB 3.0 SuperSpeed
+[    1.524069] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    1.525631] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.527023] usb usb1: Product: xHCI Host Controller
+[    1.527964] usb usb1: Manufacturer: Linux 6.1.55-arrcus xhci-hcd
+[    1.529105] usb usb1: SerialNumber: 0000:06:00.0
+[    1.530068] hub 1-0:1.0: USB hub found
+[    1.530914] hub 1-0:1.0: 15 ports detected
+[    1.532464] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.534017] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    1.535642] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.537003] usb usb2: Product: xHCI Host Controller
+[    1.537944] usb usb2: Manufacturer: Linux 6.1.55-arrcus xhci-hcd
+[    1.539093] usb usb2: SerialNumber: 0000:06:00.0
+[    1.540033] hub 2-0:1.0: USB hub found
+[    1.540883] hub 2-0:1.0: 15 ports detected
+[    1.542445] usbcore: registered new interface driver usblp
+[    1.543527] usbcore: registered new interface driver usb-storage
+[    1.544693] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    1.548009] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.549024] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.550142] mousedev: PS/2 mouse device common for all mice
+[    1.551353] rtc_cmos 00:03: RTC can wake from S4
+[    1.552818] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    1.556830] rtc_cmos 00:03: registered as rtc0
+[    1.557916] rtc_cmos 00:03: alarms up to one day, y3k, 242 bytes nvram
+[    1.559290] i2c_dev: i2c /dev entries driver
+[    1.560551] IR JVC protocol handler initialized
+[    1.560998] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+[    1.561790] IR MCE Keyboard/mouse protocol handler initialized
+[    1.564078] IR NEC protocol handler initialized
+[    1.564126] i2c i2c-0: 1/1 memory slots populated (from DMI)
+[    1.565030] IR RC5(x/sz) protocol handler initialized
+[    1.566149] i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD
+[    1.567155] IR RC6 protocol handler initialized
+[    1.569551] IR SANYO protocol handler initialized
+[    1.570511] IR Sharp protocol handler initialized
+[    1.571540] IR Sony protocol handler initialized
+[    1.572470] IR XMP protocol handler initialized
+[    1.576489] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    1.578324] hid: raw HID events driver (C) Jiri Kosina
+[    1.579504] usbcore: registered new interface driver usbhid
+[    1.580579] usbhid: USB HID core driver
+[    1.581836] xt_time: kernel timezone is -0000
+[    1.582726] IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+[    1.583907] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[    1.585452] IPVS: ipvs loaded.
+[    1.586041] IPVS: [rr] scheduler registered.
+[    1.586874] IPVS: [wrr] scheduler registered.
+[    1.587729] IPVS: [lc] scheduler registered.
+[    1.588556] IPVS: [wlc] scheduler registered.
+[    1.589383] IPVS: [fo] scheduler registered.
+[    1.590197] IPVS: [ovf] scheduler registered.
+[    1.591041] IPVS: [lblc] scheduler registered.
+[    1.591902] IPVS: [lblcr] scheduler registered.
+[    1.592770] IPVS: [dh] scheduler registered.
+[    1.593592] IPVS: [sh] scheduler registered.
+[    1.594399] IPVS: [sed] scheduler registered.
+[    1.595224] IPVS: [nq] scheduler registered.
+[    1.596042] IPVS: [sip] pe registered.
+[    1.596801] ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+[    1.598013] Initializing XFRM netlink socket
+[    1.598913] NET: Registered PF_INET6 protocol family
+[    1.604471] Segment Routing with IPv6
+[    1.605316] In-situ OAM (IOAM) with IPv6
+[    1.606092] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.607425] NET: Registered PF_PACKET protocol family
+[    1.608389] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    1.610865] NET: Registered PF_KCM protocol family
+[    1.611825] 8021q: 802.1Q VLAN Support v1.8
+[    1.612639] Key type dns_resolver registered
+[    1.613478] mpls_gso: MPLS GSO support
+[    1.614457] IPI shorthand broadcast: enabled
+[    1.615329] registered taskstats version 1
+[    1.616133] Loading compiled-in X.509 certificates
+[    1.617701] PM:   Magic number: 10:973:999
+[    1.618522] block vda: hash matches
+[    1.619204] i8042 kbd 00:01: hash matches
+[    1.619958]  pnp0: hash matches
+[    1.620579] printk: console [netcon0] enabled
+[    1.621396] netconsole: network logging started
+[    1.622373] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.626065] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.627531] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.629164] cfg80211: failed to load regulatory.db
+[    1.630089] Unstable clock detected, switching default tracing clock to &quot;global&quot;
+[    1.630089] If you want to keep using the local clock, then add:
+[    1.630089]   &quot;trace_clock=local&quot;
+[    1.630089] on the kernel command line
+[    1.633916] ALSA device list:
+[    1.634510]   No soundcards found.
+[    1.772468] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    1.786848] ata6: SATA link down (SStatus 0 SControl 300)
+[    1.788288] ata4: SATA link down (SStatus 0 SControl 300)
+[    1.789740] ata3: SATA link down (SStatus 0 SControl 300)
+[    1.791048] ata5: SATA link down (SStatus 0 SControl 300)
+[    1.792388] ata2: SATA link down (SStatus 0 SControl 300)
+[    1.793937] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.795724] Freeing unused kernel image (initmem) memory: 1880K
+[    1.796987] Write protecting the kernel read-only data: 28672k
+[    1.798364] Freeing unused kernel image (text/rodata gap) memory: 2032K
+[    1.799559] Freeing unused kernel image (rodata/data gap) memory: 988K
+[    1.800503] Run /init as init process
+Loading, please wait...
+Starting systemd-udevd version 252.39-1~deb12u1
+[    1.851929] lpc_ich 0000:00:1f.0: I/O space for GPIO uninitialized
+[    1.862190] scsi host6: Virtio SCSI HBA
+[    1.902541] usb 1-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[    1.904388] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+[    1.905860] usb 1-1: Product: QEMU USB Tablet
+[    1.906714] usb 1-1: Manufacturer: QEMU
+[    1.907447] usb 1-1: SerialNumber: 28754-0000:00:02.5:00.0-1
+[    1.909999] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:02.5/0000:06:00.0/usb1/1-1/1-1:1.0/0003:0627:0001.0001/input/input4
+[    1.912339] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:06:00.0-1/input0
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... done.
+Begin: Will now check root file system ... fsck from util-linux 2.38.1
+[/sbin/fsck.ext4 (1) -- /dev/vda2] fsck.ext4 -a -C0 /dev/vda2 
+ARCOS-ROOT: clean, 35849/1048576 files, 462667/4194043 blocks
+done.
+[    1.965175] EXT4-fs (vda2): mounted filesystem with ordered data mode. Quota mode: none.
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+[    2.039086] systemd[1]: systemd 252.39-1~deb12u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    2.043217] systemd[1]: Detected virtualization kvm.
+[    2.043885] systemd[1]: Detected architecture x86-64.
+
+Welcome to <span class="bold">Debian GNU/Linux 12 (bookworm)</span>!
+
+[    2.046309] systemd[1]: Hostname set to &lt;localhost&gt;.
+[    2.049181] systemd[1]: Initializing machine ID from VM UUID.
+[    2.049949] systemd[1]: Installed transient /etc/machine-id file.
+[    2.191798] systemd[1]: Queued start job for default target graphical.target.
+[    2.196119] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    2.203202] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[<span class="f2">  OK  </span>] Created slice <span class="bold"><span class="f9">system-getty.slice</span></span> - Slice /system/getty.
+[    2.205742] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[<span class="f2">  OK  </span>] Created slice <span class="bold"><span class="f9">system-modpr…lice</span></span> - Slice /system/modprobe.
+[    2.208518] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[<span class="f2">  OK  </span>] Created slice <span class="bold"><span class="f9">system-seria…</span></span> - Slice /system/serial-getty.
+[    2.211026] systemd[1]: Created slice user.slice - User and Session Slice.
+[<span class="f2">  OK  </span>] Created slice <span class="bold"><span class="f9">user.slice</span></span> - User and Session Slice.
+[    2.213302] systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-ask-passwo…quests to Console Directory Watch.</span></span>
+<span class="bold"><span class="f9">[    2.216005] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-ask-passwo… Requests to Wall Directory Watch.</span></span>
+<span class="bold"><span class="f9">[    2.218948] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Set up automount <span class="bold"><span class="f9">proc-sys-…rmats File System Automount Point.</span></span>
+<span class="bold"><span class="f9">[    2.222041] systemd[1]: Expecting device dev-ttyS0.device - /dev/ttyS0...</span></span>
+<span class="bold"><span class="f9">         Expecting device dev-ttyS0.device</span></span> - /dev/ttyS0...
+[    2.224281] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">cryptsetup.…get</span></span> - Local Encrypted Volumes.
+[    2.226632] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">integrityse…Local Integrity Protected Volumes.</span></span>
+<span class="bold"><span class="f9">[    2.229176] systemd[1]: Reached target paths.target - Path Units.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">paths.target</span></span> - Path Units.
+[    2.231154] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">remote-fs.target</span></span> - Remote File Systems.
+[    2.233484] systemd[1]: Reached target slices.target - Slice Units.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">slices.target</span></span> - Slice Units.
+[    2.235498] systemd[1]: Reached target swap.target - Swaps.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">swap.target</span></span> - Swaps.
+[    2.237294] systemd[1]: Reached target time-set.target - System Time Set.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">time-set.target</span></span> - System Time Set.
+[    2.239475] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">veritysetup… - Local Verity Protected Volumes.</span></span>
+<span class="bold"><span class="f9">[    2.242010] systemd[1]: Listening on syslog.socket - Syslog Socket.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">syslog.socket</span></span> - Syslog Socket.
+[    2.244048] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-fsckd…sck to fsckd communication Socket.</span></span>
+<span class="bold"><span class="f9">[    2.246675] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-initc… initctl Compatibility Named Pipe.</span></span>
+<span class="bold"><span class="f9">[    2.249355] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-journ…socket</span></span> - Journal Audit Socket.
+[    2.251948] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-journ…t</span></span> - Journal Socket (/dev/log).
+[    2.254545] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-journald.socket</span></span> - Journal Socket.
+[    2.257248] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-udevd….socket</span></span> - udev Control Socket.
+[    2.259898] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-udevd…l.socket</span></span> - udev Kernel Socket.
+[    2.272546] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+         Mounting <span class="bold"><span class="f9">dev-hugepages.mount</span></span> - Huge Pages File System...
+[    2.275945] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+         Mounting <span class="bold"><span class="f9">dev-mqueue.mount…POSIX Message Queue File System...</span></span>
+<span class="bold"><span class="f9">[    2.278657] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...</span></span>
+<span class="bold"><span class="f9">         Mounting sys-kernel-debug.…</span></span> - Kernel Debug File System...
+[    2.281307] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+         Mounting <span class="bold"><span class="f9">sys-kernel-tracin…</span></span> - Kernel Trace File System...
+[    2.284203] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+         Starting <span class="bold"><span class="f9">kmod-static-nodes…ate List of Static Device Nodes...</span></span>
+<span class="bold"><span class="f9">[    2.287092] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...</span></span>
+<span class="bold"><span class="f9">         Starting modprobe@configfs…m - Load Kernel Module configfs...</span></span>
+<span class="bold"><span class="f9">[    2.289816] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...</span></span>
+<span class="bold"><span class="f9">         Starting modprobe@dm_mod.s…[0m - Load Kernel Module dm_mod...</span></span>
+<span class="bold"><span class="f9">[    2.292460] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...</span></span>
+<span class="bold"><span class="f9">         Starting modprobe@drm.service</span></span> - Load Kernel Module drm...
+[    2.295012] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+         Starting <span class="bold"><span class="f9">modprobe@efi_psto…- Load Kernel Module efi_pstore...</span></span>
+<span class="bold"><span class="f9">[    2.297737] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...</span></span>
+<span class="bold"><span class="f9">         Starting modprobe@fuse.ser…e</span></span> - Load Kernel Module fuse...
+[    2.300334] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+         Starting <span class="bold"><span class="f9">modprobe@loop.ser…e</span></span> - Load Kernel Module loop...
+[    2.302614] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+[    2.305353] systemd[1]: Starting systemd-journald.service - Journal Service...
+         Starting <span class="bold"><span class="f9">systemd-journald.service</span></span> - Journal Service...
+[    2.308357] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+         Starting <span class="bold"><span class="f9">systemd-modules-l…rvice</span></span> - Load Kernel Modules...
+[    2.311259] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+         Starting <span class="bold"><span class="f9">systemd-remount-f…nt Root and Kernel File Systems...</span></span>
+<span class="bold"><span class="f9">[    2.314539] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...</span></span>
+<span class="bold"><span class="f9">         Starting systemd-udev-trig…[0m - Coldplug All udev Devices...</span></span>
+<span class="bold"><span class="f9">[    2.318449] EXT4-fs (vda2): re-mounted. Quota mode: none.</span></span>
+<span class="bold"><span class="f9">[    2.318961] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Mounted <span class="bold"><span class="f9">dev-hugepages.mount</span></span> - Huge Pages File System.
+[    2.322868] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[<span class="f2">  OK  </span>] Mounted <span class="bold"><span class="f9">dev-mqueue.mount- POSIX Message Queue File System.</span></span>
+<span class="bold"><span class="f9">[    2.325372] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Mounted <span class="bold"><span class="f9">sys-kernel-debug.m…nt</span></span> - Kernel Debug File System.
+[    2.327875] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[<span class="f2">  OK  </span>] Mounted <span class="bold"><span class="f9">sys-kernel-tracing…nt</span></span> - Kernel Trace File System.
+[    2.330557] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">kmod-static-nodes…reate List of Static Device Nodes.</span></span>
+<span class="bold"><span class="f9">[    2.333181] systemd[1]: modprobe@configfs.service: Deactivated successfully.</span></span>
+<span class="bold"><span class="f9">[    2.334178] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@configfs…[0m - Load Kernel Module configfs.</span></span>
+<span class="bold"><span class="f9">[    2.336885] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.</span></span>
+<span class="bold"><span class="f9">[    2.337822] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@dm_mod.s…e</span></span> - Load Kernel Module dm_mod.
+[    2.340322] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    2.341232] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@drm.service</span></span> - Load Kernel Module drm.
+[    2.343552] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    2.344532] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@efi_psto…m - Load Kernel Module efi_pstore.</span></span>
+<span class="bold"><span class="f9">[    2.347203] systemd[1]: modprobe@fuse.service: Deactivated successfully.</span></span>
+<span class="bold"><span class="f9">[    2.348142] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@fuse.service</span></span> - Load Kernel Module fuse.
+[    2.350585] systemd[1]: modprobe@loop.service: Deactivated successfully.
+[    2.351561] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">modprobe@loop.service</span></span> - Load Kernel Module loop.
+[    2.353920] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-modules-l…service</span></span> - Load Kernel Modules.
+[    2.356350] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-remount-f…ount Root and Kernel File Systems.</span></span>
+<span class="bold"><span class="f9">[    2.359050] systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-udev-trig…e</span></span> - Coldplug All udev Devices.
+[    2.361690] systemd[1]: sys-fs-fuse-connections.mount - FUSE Control File System was skipped because of an unmet condition check (ConditionPathExists=/sys/fs/fuse/connections).
+[    2.363732] systemd[1]: sys-kernel-config.mount - Kernel Configuration File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/config).
+[    2.365659] systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[    2.367245] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+[    2.378715] systemd[1]: Starting systemd-random-seed.service - Load/Save Random Seed...
+         Starting <span class="bold"><span class="f9">systemd-random-se…ice</span></span> - Load/Save Random Seed...
+[    2.381562] systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+[    2.383930] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+         Starting <span class="bold"><span class="f9">systemd-sysctl.se…ce</span></span> - Apply Kernel Variables...
+[    2.387490] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+         Starting <span class="bold"><span class="f9">systemd-sysusers.…rvice</span></span> - Create System Users...
+[    2.390675] systemd[1]: Starting systemd-udev-settle.service - Wait for udev To Complete Device Initialization...
+         Starting <span class="bold"><span class="f9">systemd-udev-sett… Complete Device Initialization...</span></span>
+<span class="bold"><span class="f9">[    2.395392] systemd[1]: Started systemd-journald.service - Journal Service.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-journald.service</span></span> - Journal Service.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-random-se…rvice</span></span> - Load/Save Random Seed.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-sysctl.service</span></span> - Apply Kernel Variables.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-sysusers.service</span></span> - Create System Users.
+         Starting <span class="bold"><span class="f9">systemd-journal-f…h Journal to Persistent Storage...</span></span>
+<span class="bold"><span class="f9">         Starting systemd-tmpfiles-…ate Static Device Nodes in /dev...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-tmpfiles-…reate Static Device Nodes in /dev.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">local-fs-pr…reparation for Local File Systems.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">local-fs.target</span></span> - Local File Systems.
+         Starting <span class="bold"><span class="f9">systemd-binfmt.se…et Up Additional Binary Formats...</span></span>
+<span class="bold"><span class="f9">         Starting systemd-machine-i… a transient machine-id on disk...</span></span>
+<span class="bold"><span class="f9">         Starting systemd-udevd.ser…ger for Device Events and Files...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-journal-f…ush Journal to Persistent Storage.</span></span>
+<span class="bold"><span class="f9">         Mounting proc-sys-fs-binfm…utable File Formats File System...</span></span>
+<span class="bold"><span class="f9">         Starting systemd-tmpfiles-…te System Files and Directories...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Mounted <span class="bold"><span class="f9">proc-sys-fs-binfmt…ecutable File Formats File System.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-binfmt.se… Set Up Additional Binary Formats.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-tmpfiles-…eate System Files and Directories.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">resolvconf.service… - Nameserver information manager.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">network-pre…get</span></span> - Preparation for Network.
+         Starting <span class="bold"><span class="f9">systemd-update-ut…rd System Boot/Shutdown in UTMP...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-update-ut…cord System Boot/Shutdown in UTMP.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-machine-i…it a transient machine-id on disk.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-udevd.serv…nager for Device Events and Files.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Found device <span class="bold"><span class="f9">dev-ttyS0.device</span></span> - /dev/ttyS0.
+[<span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">systemd-rfkil…l Switch Status /dev/rfkill Watch.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-udev-sett…To Complete Device Initialization.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">sysinit.target</span></span> - System Initialization.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-tmpfiles-c… Cleanup of Temporary Directories.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Listening on <span class="bold"><span class="f9">dbus.socket- D-Bus System Message Bus Socket.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">sockets.target</span></span> - Socket Units.
+         Starting <span class="bold"><span class="f9">networking.service</span></span> - Network initialization...
+[<span class="f1">*     </span>] Job networking.service/start running (2s / no limit)
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">networking.service</span></span> - Network initialization.                                                                                                                                                                                                                                                                                                                        
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">network.target</span></span> - Network.                                                                                                                                                                                                                                                                                                                                     
+         Starting <span class="bold"><span class="f9">kdump-tools.servi…rnel crash dump capture service...</span></span>
+<span class="bold"><span class="f9">[    5.210977] kdump-tools[1160]: Starting kdump-tools:</span></span>
+<span class="bold"><span class="f9">[    5.212601] kdump-tools[1164]: Creating symlink /var/lib/kdump/vmlinuz.</span></span>
+<span class="bold"><span class="f9">[    5.249472] kdump-tools[1181]: kdump-tools: Generating /var/lib/kdump/initrd.img-6.1.55-arrcus</span></span>
+<span class="bold"><span class="f9">[    5.256375] kdump-tools[1190]: W: No zstd in /usr/bin:/sbin:/bin, using gzip</span></span>
+<span class="bold"><span class="f9">[    5.365824] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/skl_huc_2.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.367737] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/bxt_huc_2.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.370336] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_huc_4.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.372306] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/glk_huc_4.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.374174] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_huc_4.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.376253] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_huc_4.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.378401] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/cml_huc_4.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.380340] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/icl_huc_9.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.382375] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/ehl_huc_9.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.384635] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/ehl_huc_9.0.0.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.386673] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc_7.9.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.388814] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc_7.9.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.390620] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/dg1_huc.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.392600] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc_7.9.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.394444] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.396349] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc_7.9.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.398173] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_huc.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.399944] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/skl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.401799] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/bxt_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.403797] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.405780] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/glk_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.407622] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.409461] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.411313] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/cml_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.413179] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/icl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.415771] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/ehl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.417950] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/ehl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.419884] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.421816] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.423732] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/dg1_guc_70.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.425595] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_guc_69.0.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.427524] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.429424] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_guc_70.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.431291] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/adlp_guc_69.0.3.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.433231] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/adlp_guc_70.1.1.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.435183] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/adlp_guc_70.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.437092] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/dg2_guc_70.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.439141] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/bxt_dmc_ver1_07.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.441075] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/skl_dmc_ver1_27.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.443024] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/kbl_dmc_ver1_04.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.444964] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/glk_dmc_ver1_04.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.446905] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/icl_dmc_ver1_09.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.448859] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/tgl_dmc_ver2_12.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.450798] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/rkl_dmc_ver2_03.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.453095] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/dg1_dmc_ver2_02.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.455645] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/adls_dmc_ver2_01.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.457899] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/adlp_dmc_ver2_16.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.460107] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/i915/dg2_dmc_ver2_07.bin for built-in driver i915</span></span>
+<span class="bold"><span class="f9">[    5.461967] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/tigon/tg3_tso5.bin for built-in driver tg3</span></span>
+<span class="bold"><span class="f9">[    5.463746] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/tigon/tg3_tso.bin for built-in driver tg3</span></span>
+<span class="bold"><span class="f9">[    5.465525] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/tigon/tg357766.bin for built-in driver tg3</span></span>
+<span class="bold"><span class="f9">[    5.468173] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/tigon/tg3.bin for built-in driver tg3</span></span>
+<span class="bold"><span class="f9">[    5.469937] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/e100/d102e_ucode.bin for built-in driver e100</span></span>
+<span class="bold"><span class="f9">[    5.471943] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/e100/d101s_ucode.bin for built-in driver e100</span></span>
+<span class="bold"><span class="f9">[    5.473839] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/e100/d101m_ucode.bin for built-in driver e100</span></span>
+<span class="bold"><span class="f9">[    5.475730] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/regulatory.db for built-in driver cfg80211</span></span>
+<span class="bold"><span class="f9">[    5.477546] kdump-tools[1364]: W: Possible missing firmware /lib/firmware/regulatory.db.p7s for built-in driver cfg80211</span></span>
+<span class="bold"><span class="f9">[    6.457400] kdump-tools[1164]: Creating symlink /var/lib/kdump/initrd.img.</span></span>
+<span class="bold"><span class="f9">[    6.616102] kdump-tools[1164]: loaded kdump kernel.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">kdump-tools.servi…Kernel crash dump capture service.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">basic.target</span></span> - Basic System.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">aaa.service</span></span> - AAA Module (arcos).
+         Starting <span class="bold"><span class="f9">arcos_init.service</span></span> - arcos_init Service...
+         Starting <span class="bold"><span class="f9">atd.service</span></span> - Deferred execution scheduler...
+         Starting <span class="bold"><span class="f9">chrony.service</span></span> - chrony, an NTP client/server...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">cron.service</span></span> -…kground program processing daemon.
+         Starting <span class="bold"><span class="f9">dbus.service</span></span> - D-Bus System Message Bus...
+         Starting <span class="bold"><span class="f9">e2scrub_reap.serv…e ext4 Metadata Check Snapshots...</span></span>
+<span class="bold"><span class="f9">         Starting eventmgr-on-boot.service</span></span> - Eventmgr (arcos)...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">hdw_wdt.service</span></span> - HDW_WDT Module (arcos).
+         Starting <span class="bold"><span class="f9">kexec-load.servic…B: Load kernel image with kexec...</span></span>
+<span class="bold"><span class="f9">         Starting kmod_hdlr.service</span></span> - kmod_hdlr Service...
+         Starting <span class="bold"><span class="f9">lldpd.service</span></span> - LLDP daemon...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">lttng-sessiond.service</span></span> - LTTng session daemon.
+         Starting <span class="bold"><span class="f9">memory_watchdog.s…nit.d for ArcOS memory_watchdog...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">resource_monitor.s…ce</span></span> - resource_monitor Service.
+         Starting <span class="bold"><span class="f9">rsyslog.service</span></span> - System Logging Service...
+         Starting <span class="bold"><span class="f9">setup-arcos.servi… environment for Arcos services...</span></span>
+<span class="bold"><span class="f9">         Starting shared_mem_resize…[0m - shared_mem_resize Service...</span></span>
+<span class="bold"><span class="f9">         Starting snmpd.service</span></span>…agement Protocol (SNMP) Daemon....
+         Starting <span class="bold"><span class="f9">ssh-generate-host…hell server Host Key Generation...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">strongswan-starter…Ev1/IKEv2 daemon using ipsec.conf.</span></span>
+<span class="bold"><span class="f9">         Starting sysstat.service</span></span> - Resets System Activity Logs...
+         Starting <span class="bold"><span class="f9">systemd-logind.se…ice</span></span> - User Login Management...
+         Starting <span class="bold"><span class="f9">systemd-user-sess…vice</span></span> - Permit User Sessions...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">dbus.service</span></span> - D-Bus System Message Bus.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">rsyslog.service</span></span> - System Logging Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">lldpd.service</span></span> - LLDP daemon.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">snmpd.service</span></span> …anagement Protocol (SNMP) Daemon..
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">atd.service</span></span> - Deferred execution scheduler.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">chrony.service</span></span> - chrony, an NTP client/server.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">eventmgr-on-boot.service</span></span> - Eventmgr (arcos).
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">kmod_hdlr.service</span></span> - kmod_hdlr Service.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">e2scrub_reap.serv…ine ext4 Metadata Check Snapshots.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">shared_mem_resize…e</span></span> - shared_mem_resize Service.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">sysstat.service</span></span> - Resets System Activity Logs.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">systemd-user-sess…ervice</span></span> - Permit User Sessions.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">systemd-logind.service</span></span> - User Login Management.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">kexec-load.service…LSB: Load kernel image with kexec.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">memory_watchdog.se… init.d for ArcOS memory_watchdog.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">time-sync.t…et</span></span> - System Time Synchronized.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">apt-daily.timer</span></span> - Daily apt download activities.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">apt-daily-upgrade.… apt upgrade and clean activities.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">dpkg-db-backup.tim… Daily dpkg database backup timer.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">e2scrub_all.timer…etadata Check for All Filesystems.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">fstrim.timer</span></span> - Discard unused blocks once a week.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">logrotate.timer</span></span> - Daily rotation of log files.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sysstat-collect.ti… accounting tool every 10 minutes.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sysstat-summary.ti…of yesterday's process accounting.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">timers.target</span></span> - Timer Units.
+         Starting <span class="bold"><span class="f9">arcos-user-init.s…ice</span></span> - ArcOS user management...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">getty@tty1.service</span></span> - Getty on tty1.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">serial-getty@ttyS0…rvice</span></span> - Serial Getty on ttyS0.
+[<span class="f2">  OK  </span>] Reached target <span class="bold"><span class="f9">getty.target</span></span> - Login Prompts.
+         Stopping <span class="bold"><span class="f9">kdump-tools.servi…rnel crash dump capture service...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">ssh-generate-host… Shell server Host Key Generation.</span></span>
+<span class="bold"><span class="f9">         Starting ssh.service</span></span> - OpenBSD Secure Shell server...
+[    7.017465] kdump-tools[2780]: Stopping kdump-tools:
+[    7.017655] kdump-tools[2784]: unloaded kdump kernel.
+[<span class="f2">  OK  </span>] Stopped <span class="bold"><span class="f9">kdump-tools.servic…Kernel crash dump capture service.</span></span>
+<span class="bold"><span class="f9">         Starting kdump-tools.servi…rnel crash dump capture service...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ssh.service</span></span> - OpenBSD Secure Shell server.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">setup-arcos.servi…et environment for Arcos services.</span></span>
+<span class="bold"><span class="f9">[    7.064599] kdump-tools[2806]: Starting kdump-tools:</span></span>
+<span class="bold"><span class="f9">[    7.064857] kdump-tools[2810]: Creating symlink /var/lib/kdump/vmlinuz.</span></span>
+<span class="bold"><span class="f9">[    7.067107] kdump-tools[2810]: Creating symlink /var/lib/kdump/initrd.img.</span></span>
+<span class="bold"><span class="f9">[    7.073801] kdump-tools[2810]: /etc/default/kdump-tools: KDUMP_KERNEL does not exist: None ... failed!</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">kdump-tools.servi…Kernel crash dump capture service.</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">arcos-user-init.service</span></span> - ArcOS user management.
+2026-01-22 18:59:49 ArcOS arcos_init INFO: Cmd ['python3', '/usr/share/arcos/gen_confd_conf.py'] successful.
+[<span class="f2">  OK  </span>] Stopped <span class="bold"><span class="f9">logrotate.timer</span></span> - Daily rotation of log files.
+         Stopping <span class="bold"><span class="f9">logrotate.timer</span></span> - Daily rotation of log files...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">logrotate.timer</span></span> - Daily rotation of log files.
+         Stopping <span class="bold"><span class="f9">ssh.service</span></span> - OpenBSD Secure Shell server...
+[<span class="f2">  OK  </span>] Stopped <span class="bold"><span class="f9">ssh.service</span></span> - OpenBSD Secure Shell server.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">arcos_init.service</span></span> - arcos_init Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">confd.service</span></span> - confd Service.
+         Starting <span class="bold"><span class="f9">confd_phase0_chec…0m - confd_phase0_check Service...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">confd_phase0_chec…</span></span> - confd_phase0_check Service.
+         Starting <span class="bold"><span class="f9">confd_vp_reg_chec…0m - confd_vp_reg_check Service...</span></span>
+<span class="bold"><span class="f9">         Starting marker.service</span></span> - marker Service...
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">marker.service</span></span> - marker Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">arcos_mps.service…cOS Message Passing Service (MPS).</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">aaa_conf.service</span></span> - aaa_conf Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">acl.service</span></span> - acl Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">acl_helper.service</span></span> - acl_helper Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">adjmgr.service</span></span> - adjmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">apcmgr.service</span></span> - apcmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">bfd.service</span></span> - bfd Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">bgp.service</span></span> - bgp Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">chassismgr.service</span></span> - chassismgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">dpal.service</span></span> - dpal Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">dra.service</span></span> - dra Service.
+         Starting <span class="bold"><span class="f9">eventmgr-on-arcos…eventmgr-on-arcos-start Service...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">eventmgr.service</span></span> - eventmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">fib.service</span></span> - fib Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">gnmi.service</span></span> - gnmi Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ifmgr.service</span></span> - ifmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ip.service</span></span> - ip Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ipfix.service</span></span> - ipfix Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">key_chain.service</span></span> - key_chain Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">l2featmgr.service</span></span> - l2featmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">l2rib.service</span></span> - l2rib Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">l3fm.service</span></span> - l3fm Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">lblmgr.service</span></span> - lblmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">li.service</span></span> - li Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">licmgr.service</span></span> - licmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">lldp_service.service</span></span> - lldp_service Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">lldp.service</span></span> - lldp Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">macsec.service</span></span> - macsec Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">monitor.service</span></span> - monitor Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ntp_snmp.service</span></span> - ntp_snmp Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">pltfAgent.service</span></span> - pltfAgent Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">pltfServer.service</span></span> - pltfServer Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ptp.service</span></span> - ptp Service.
+         Starting <span class="bold"><span class="f9">qos.service</span></span> - qos Service...
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">rad.service</span></span> - rad Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">rib.service</span></span> - rib Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">ldp.service</span></span> - ldp Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">rpol.service</span></span> - rpol Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sflow.service</span></span> - sflow Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sidmgr.service</span></span> - sidmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sla.service</span></span> - sla Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">smd.service</span></span> - smd Service.
+         Starting <span class="bold"><span class="f9">spyder.service Spyder Process Manager (arcos)...</span></span>
+<span class="bold"><span class="f9">[</span></span><span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">srpolicy.service</span></span> - srpolicy Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">srv6oam.service</span></span> - srv6oam Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">stp.service</span></span> - stp Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sys_conf.service</span></span> - sys_conf Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">sysmgr.service</span></span> - sysmgr Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">telemetry.service</span></span> - telemetry Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">twamp_reflector.se…ice</span></span> - twamp_reflector Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">twamp_ssender.service</span></span> - twamp_ssender Service.
+[<span class="f2">  OK  </span>] Started <span class="bold"><span class="f9">vrfmgr.service</span></span> - vrfmgr Service.
+[<span class="f2">  OK  </span>] Finished <span class="bold"><span class="f9">eventmgr-on-arcos…- eventmgr-on-arcos-start Service.</span></span>
+
+<span class="bold"><span class="f9">Debian GNU/Linux 12 localhost ttyS0</span></span>
+
+<span class="bold"><span class="f9">localhost login: 2026-01-22 19:01:01 ArcOS arcos.startup_config INFO: snmp enable is False, skipping sys descr update</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:02 ArcOS arcos.startup_config INFO: Global_Config_Trigger: The following services did not subscribe to CDB within 60 seconds: {'l3fm.service'}</span></span>
+<span class="bold"><span class="f9">[  140.090939] process '/usr/sbin/mstpd' started with executable stack</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:17 ArcOS ztp INFO: Starting Zero Touch Provisioning (ZTP). Please do not change the system configuration during this time. To stop and disable ZTP run CLI command: &quot;request system ztp stop&quot;</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:17 ArcOS ztp INFO: Trying to bring interfaces up</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:30 ArcOS ztp INFO: Sending DHCP requests on interfaces [ma1]</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:35 ArcOS ztp INFO: No DHCP responses received with config-url or script-url options. Retrying...</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:48 ArcOS ztp INFO: Sending DHCP requests on interfaces [ma1]</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:02:54 ArcOS ztp INFO: Received DHCP response on ma1 with IP address 192.168.132.187, subnet mask 255.255.255.0, option config-url http://192.168.132.1/arrcus/ztp/base.cfg</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:03:09 ArcOS ztp INFO: Fetching file from URL http://192.168.132.1/arrcus/ztp/base.cfg</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:03:09 ArcOS ztp INFO: Applying ZTP configuration</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:03:14 ArcOS ztp INFO: ZTP configuration applied successfully</span></span>
+<span class="bold"><span class="f9">2026-01-22 19:03:14 ArcOS ztp INFO: Zero Touch Provisioning completed successfully</span></span>
+
+<span class="bold"><span class="f9">Running text console command: virsh --connect qemu:///system console Prem-TB1-rtr2</span></span>
+<span class="bold"><span class="f9">Domain creation completed.</span></span>
+
+<span class="bold"><span class="f9">VM Prem-TB1-rtr2 running ... ( vnc: 192.168.1.13:5901 )</span></span>
+
+<span class="bold"><span class="f9">❯ brctl show Prem-TB1-br1 Prem-TB1-br2</span></span>
+<span class="bold"><span class="f9">bridge name     bridge id               STP enabled     interfaces</span></span>
+<span class="bold"><span class="f9">Prem-TB1-br1            8000.ba241ae5a696       no              vnet25</span></span>
+<span class="bold"><span class="f9">                                                        vnet31</span></span>
+<span class="bold"><span class="f9">Prem-TB1-br2            8000.aa1efef8d8d9       no              vnet26</span></span>
+<span class="bold"><span class="f9">                                                        vnet32</span></span>
+
+<span class="bold"><span class="f9">❯ virsh list</span></span>
+<span class="bold"><span class="f9"> Id   Name            State</span></span>
+<span class="bold"><span class="f9">-------------------------------</span></span>
+<span class="bold"><span class="f9"> 21   Prem-TB1-rtr1   running</span></span>
+<span class="bold"><span class="f9"> 23   Prem-TB1-rtr2   running</span></span>
+</pre>
+</body>
+</html>
