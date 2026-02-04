@@ -90,7 +90,8 @@ Install the required packages:
 
 ```bash
 sudo apt install curl bridge-utils
-sudo apt install --no-install-recommends qemu-system-x86 libvirt-clients libvirt-daemon-system virtinst
+sudo apt install --no-install-recommends qemu-system-x86 libvirt-clients libvirt-daemon-system \
+                                         virtinst qemu-utils
 ```
 
 Add your user to the libvirt group:
@@ -295,8 +296,14 @@ Usage:
         [--bridges=<bridges>]     # Bridge interfaces (comma-separated)
         [--pci=<pci>]             # PCI devices for passthrough
         [--extra_args=<args>]     # Additional virt-install arguments
-        [--sim_dir=<dir>]         # Simulation directory
-        [--image_dir=<dir>]       # Image directory
+        [--base_dir=<dir>]        # Base directory used to compute sim_dir & image_dir
+                                  # Defaults to /space
+        [--sim_dir=<dir>]         # Simulation directory where disk images for the VMs gets created
+                                  # This directory needs to be accessible by "libvirt-qemu" user
+                                  # Defaults to $BASE_DIR/$USER/sim_dir
+        [--image_dir=<dir>]       # Image directory where disk will be looked for
+                                  # Used only when specified disk is a not absolute path
+                                  # Defaults to $BASE_DIR/$USER/arrcus/images
         [--cleanup]               # Destroy VMs and cleanup
 ```
 
@@ -305,7 +312,7 @@ Usage:
 **Basic launch:**
 
 ```bash
-./launch_arcos.sh --disk arcos-image.qcow2
+./launch_arcos.sh --disk arcos-image.qcow2 --base_dir /space
 ```
 
 **Launch with custom resources:**
@@ -329,6 +336,24 @@ virsh list
 -------------------------------
  1    Prem-TB1-rtr1  running
  2    Prem-TB1-rtr2  running
+```
+
+** Inspecting networks **
+
+```bash
+❯ virsh domiflist Prem-TB1-rtr1
+ Interface   Type      Source         Model    MAC
+------------------------------------------------------------------
+ -           network   ztp            virtio   52:54:00:79:0e:2f
+ -           bridge    Prem-TB1-br1   virtio   52:54:00:f2:29:59
+ -           bridge    Prem-TB1-br2   virtio   52:54:00:cf:c0:fc
+
+❯ virsh domiflist Prem-TB1-rtr2
+ Interface   Type      Source         Model    MAC
+------------------------------------------------------------------
+ -           network   ztp            virtio   52:54:00:a9:a1:2b
+ -           bridge    Prem-TB1-br1   virtio   52:54:00:b9:3e:58
+ -           bridge    Prem-TB1-br2   virtio   52:54:00:a9:40:c1
 ```
 
 ### Accessing VMs
@@ -362,7 +387,7 @@ VMs can also be accessed over the graphical console using a vnc client.
 :0
 ```
 
-Just add `5900` to the port number show in the above outout and you can launch your vnc client and
+Just add `5900` to the port number shown in the above outout and you can launch your vnc client and
 connect to `<IP Adrress>:<Port>`
 
 ![VNC Console Example](images/vnc.png)
@@ -397,6 +422,9 @@ brew install virt-manager
  Replace <kvm-hypervisor> with the ip address of the Debian Server being used as the KVM Hypervisor
 ```bash
 $ virt-manager -c 'qemu+ssh://<kvm-hypervisor>/system'
+
+# For example,
+$ virt-manager -c 'qemu+ssh://hx/system'
 ```
 
 ### Cleanup
