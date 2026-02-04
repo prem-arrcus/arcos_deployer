@@ -1,19 +1,22 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 [ "$DEBUG" == "1" ] && set -x
 
 # Load needed libs
-base_dir="$(dirname "$(realpath $0)")"
-source $base_dir/lib/init
-source $base_dir/lib/pda
+script_dir="$(dirname "$(realpath $0)")"
+echo $script_dir
+source $script_dir/lib/init
+source $script_dir/lib/pda
 
 # Usage
 usage() {
-  pda::usage $0 "disk" "name" "tb" "cpus" "mem" "networks" "bridges" "pci" "extra_args" "sim_dir" "image_dir" "cleanup"
+  pda::usage $0 "disk" "name" "tb" "cpus" "mem" "networks" "bridges" "pci" \
+    "extra_args" "base_dir" "sim_dir" "image_dir" "cleanup"
 
   disk="<disk.qcow2>"
-  pda::example $0 "--disk $disk" \
+  pda::example $0 "--disk <path to $disk> --base_dir /space" \
+    "--name rtr1 --disk $disk --image_dir /path/to/my/images" \
     "--name rtr1 --tb TB1 --disk $disk" \
     "--name rtr1 --tb TB1 --disk $disk --networks mynet1,mynet2" \
     "--name rtr1 --tb TB1 --disk $disk --bridges br1,br2" \
@@ -21,11 +24,24 @@ usage() {
     "--name rtr1 --tb TB1 --cleanup" \
     "--tb TB1 --cleanup"
 }
-echo "$*" | grep -- '-h' && usage
+
+# Pre-requisites
+source /etc/os-release
+if [ "$ID" = "debian" ] || [ "$ID" = "ubuntu" ]; then
+  check_pkg() { dpkg -s "$1" &> /dev/null; }
+  pkgs="bridge-utils qemu-system-x86 libvirt-clients libvirt-daemon-system virtinst qemu-utils"
+elif [ "$ID" = "arch" ] || [ "$ID" = "cachyos" ]; then
+  check_pkg() { pacman -Q "$1" &> /dev/null; }
+  pkgs="bridge-utils qemu-system-x86 libvirt virt-install qemu-img"
+else
+  die "Unsupported distro"
+fi
+for pkg in $pkgs; do
+  check_pkg "$pkg" || die "Needed package '$pkg' not installed. Please install it to proceed"
+done
 
 # Defaults
 export LIBVIRT_DEFAULT_URI="qemu:///system"
-MGMT_BRIDGE=virbr0
 extra_args=""
 
 # Parse cli args
@@ -33,14 +49,15 @@ cpus=2
 mem=4096
 pda::parse_cli_args $@
 
-SIM_DIR="${sim_dir:-/space/prem/sim_dir/$tb}"
-IMAGE_DIR="${image_dir:-/space/prem/arrcus/images}"
+# Init SIM_DIR & IMAGE_DIR
+BASE_DIR="/space"
+SIM_DIR="${sim_dir:-$BASE_DIR/$USER/sim_dir}/$tb"
+IMAGE_DIR="${image_dir:-$BASE_DIR/$USER/arrcus/images}"
 
 if [ -n "$cleanup" ]; then
   [ -n "$tb" ] || die "Testbed name (--tb) arg is mandatory for cleanup"
   vm_ptrn="^${tb}-"
   [ -n "$name" ] && vm_ptrn="^${tb}-${name}\$" || vm_ptrn="^${tb}-"
-  SIM_DIR="${sim_dir:-/space/prem/sim_dir/$tb}"
 
   # Destroy the VMs
   echo "Destroying VMs"
@@ -78,13 +95,13 @@ if [ -n "$cleanup" ]; then
 fi
 
 # Init defaults after parsing cli argsi
-: ${name:=rtr}
-: ${tb:=TB1}
+: "${name:=rtr}"
+: "${tb:=TB1}"
 uname="${tb}-${name}"
 
 # Create SIM_DIR
 #echo "Creating SIM_DIR: $SIM_DIR"
-mkdir -p $SIM_DIR || die "Failed to create SIM_DIR"
+mkdir -p "$SIM_DIR" || die "Failed to create SIM_DIR"
 
 # Disk
 if [ -n "$disk" ]; then
@@ -96,6 +113,8 @@ if [ -n "$disk" ]; then
       die "Disk: $disk not found"
     fi
   fi
+  sudo -u libvirt-qemu test -r "$disk" \
+    || die "Disk $disk doesn't have read access for libvirt-qemu user"
   my_disk="${SIM_DIR}/${name}.qcow2"
   rm -rf "$my_disk"
 
@@ -147,7 +166,7 @@ fi
 echo "Network args: $network_args"
 echo
 
-sudo virt-install \
+virt-install \
   --connect qemu:///system \
   --machine q35 --virt-type kvm \
   --iommu intel,driver.intremap=on,driver.caching_mode=on,driver.eim=on \
@@ -158,13 +177,13 @@ sudo virt-install \
   --vcpus $cpus --memory $mem \
   --install no_install=yes \
   --controller type=scsi,model=virtio-scsi,driver.iommu=on \
-  --boot hd --disk $disk_args,target.bus=scsi \
+  --boot hd --disk "${disk_args},target.bus=scsi" \
   --graphics vnc,listen=0.0.0.0 \
   --autoconsole text \
   --controller type=virtio-serial,driver.iommu=on \
   --console=pty,target_type=serial \
-  "$network_args" \
-  "$extra_args"
+  ${network_args} \
+  ${extra_args}
 
 echo
 echo -n "VM $uname running ... "
