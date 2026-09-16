@@ -1,10 +1,11 @@
+#!/usr/bin/env bash
 # Parse dashed (cli) args
 pda::usage() {
     echo -e "\nUsage:\n~~~~~~"
-    echo "    $(basename $1) "; shift
+    echo "    $(basename "$1") "; shift
     local arg rarg desc val
     for arg in "$@"; do
-      IFS=: read arg desc val <<< $arg
+      IFS=: read -r arg desc val <<< "$arg"
       [ -n "$desc" ] || desc="${arg/_/ }"
       [ -n "$ALL_CAPS" ] && rarg="${arg^^}" || rarg="$arg"
       [ -n "$val" ] || val="${!rarg}"
@@ -16,7 +17,8 @@ pda::usage() {
 }
 pda::example() {
   echo -e "\nExamples:\n~~~~~~~~~"
-  local script=$(basename $1); shift
+  local script
+  script=$(basename "$1"); shift
   for arg in "$@"; do
     echo "    $script $arg"
   done
@@ -41,7 +43,8 @@ pda::parse_cli_args() {
               shift
             done
             [ "$val" == "" ] && val=1
-            read $var <<< "$val" || die "${FUNCNAME[0]}: Read failed"
+# shellcheck disable=SC2229
+            read -r "$var" <<< "$val" || die "${FUNCNAME[0]}: Read failed"
         fi
         echo "    Arg: $var: ${!var}"
     done

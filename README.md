@@ -463,6 +463,8 @@ Cleanup succeeded
 
 ```
 deploy/
+├── .github/workflows/
+│   └── shellcheck.yml   # CI workflow: ShellCheck linting (mandatory)
 ├── launch_arcos.sh          # Main VM launcher script
 ├── lib/
 │   ├── init                 # Initialization and error handling library
@@ -474,6 +476,40 @@ deploy/
 │   └── sample_log.html      # Sample deployment log
 └── README.md                # This file
 ```
+
+---
+
+## CI Requirements
+
+This project uses GitHub Actions for continuous integration. The **ShellCheck** workflow runs on every pull request and **must pass before a PR can be merged**.
+
+### Making ShellCheck Mandatory
+
+To enforce ShellCheck as a required check before merging:
+
+1. Go to **Settings** > **Branches** in the GitHub repository
+2. Click **Add rule** under Branch protection rules
+3. Set the branch name pattern to `main` (or `master`)
+4. Under **Require status checks to pass before merging**, check the box
+5. Select **ShellCheck** from the list of required checks
+6. Click **Save changes**
+
+This ensures no code can be merged without passing ShellCheck linting.
+
+### Pre-commit Hook
+
+A pre-commit hook runs `shellcheck` and `shfmt` on `launch_arcos.sh` before each commit. To install it:
+
+```bash
+bash hooks/install-hooks.sh
+```
+
+This will:
+- Auto-format `launch_arcos.sh` with `shfmt`
+- Run `shellcheck` on `launch_arcos.sh`
+- Block the commit if either check fails
+
+**Requirements:** `shellcheck` and `shfmt` must be installed on your system.
 
 ---
 
