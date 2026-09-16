@@ -1,0 +1,40 @@
+name: ShellCheck
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Find all shell scripts
+        id: shell-files
+        run: |
+          FILES=$(find . -type f \( -name '*.sh' -o -path 'lib/*' \) -not -path './.git/*' -not -path './node_modules/*' | sort)
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "$FILES"
+
+      - name: Run ShellCheck
+        run: |
+          FILES=$(find . -type f \( -name '*.sh' -o -path 'lib/*' \) -not -path './.git/*' -not -path './node_modules/*')
+          if [ -z "$FILES" ]; then
+            echo "No shell scripts found"
+            exit 0
+          fi
+          echo "Running ShellCheck on:"
+          echo "$FILES"
+          shellcheck --external-sources -S warning $FILES
+        continue-on-error: false

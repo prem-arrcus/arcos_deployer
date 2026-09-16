@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Pre-commit hook: runs shellcheck and shfmt on launch_arcos.sh
+# Install: copy this file to .git/hooks/pre-commit or run hooks/install-hooks.sh
+
+SCRIPT="launch_arcos.sh"
+FAILED=0
+
+# Check if launch_arcos.sh is being changed
+if ! git diff --cached --name-only | grep -q "^${SCRIPT}$"; then
+    exit 0
+fi
+
+echo "Running pre-commit checks on ${SCRIPT}..."
+
+# Auto-format with shfmt
+echo "  shfmt (formatting)..."
+shfmt -w -s "$SCRIPT"
+
+# Verify formatting
+echo "  shfmt (verifying)..."
+if ! shfmt -d -s "$SCRIPT"; then
+    echo "  [FAIL] shfmt found formatting issues in ${SCRIPT}"
+    FAILED=1
+else
+    echo "  [PASS] shfmt"
+fi
+
+# Run shellcheck
+echo "  ShellCheck..."
+if ! shellcheck --external-sources -S warning "$SCRIPT"; then
+    echo "  [FAIL] ShellCheck found issues in ${SCRIPT}"
+    FAILED=1
+else
+    echo "  [PASS] ShellCheck"
+fi
+
+if [ "$FAILED" -eq 1 ]; then
+    echo ""
+    echo "Pre-commit checks failed. Fix the issues above."
+    exit 1
+fi
+
+echo "All pre-commit checks passed."
+exit 0
