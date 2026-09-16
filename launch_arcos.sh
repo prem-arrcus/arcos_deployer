@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-set -ex
-[ "$DEBUG" == "1" ] && set -x
+set -e
+[ "$DEBUG" == "1" ] && cmd=echo && set -x
+
+die() { echo -e "$@"; exit 1; }
 
 # Load needed libs
 script_dir="$(dirname "$(realpath $0)")"
@@ -11,8 +13,8 @@ source $script_dir/lib/pda
 
 # Usage
 usage() {
-  pda::usage $0 "disk" "name" "tb" "cpus" "mem" "networks" "bridges" "pci" \
-    "extra_args" "base_dir" "sim_dir" "image_dir" "cleanup"
+  pda::usage $0 "disk" "name" "tb" "efi" "cpus" "mem" "networks" "bridges" "pci" \
+    "extra_args" "base_dir" "sim_dir" "image_dir" "cleanup" "skip_unique_bridge_names"
 
   disk="<disk.qcow2>"
   pda::example $0 "--disk <path to $disk> --base_dir /space" \
@@ -20,6 +22,7 @@ usage() {
     "--name rtr1 --tb TB1 --disk $disk" \
     "--name rtr1 --tb TB1 --disk $disk --networks mynet1,mynet2" \
     "--name rtr1 --tb TB1 --disk $disk --bridges br1,br2" \
+    "--name rtr1 --tb TB1 --disk $disk --bridges br1,br2" --skip_unique_bridge_names \
     "--name rtr1 --tb TB1 --disk $disk --pci pci_0000_31_00_0,pci_0000_31_00_1" \
     "--name rtr1 --tb TB1 --cleanup" \
     "--tb TB1 --cleanup"
@@ -139,9 +142,10 @@ if [ -n "$networks" ]; then
 fi
 ## connect to new bridged networks
 if [ -n "$bridges" ]; then
-  existing_bridges="$(ip -br link show type bridge | cut -f1 -d: | xargs)"
+  echo "  Bridges: $bridges"
+  existing_bridges="$(ip -br link show type bridge | cut -f1 -d' ' | xargs)"
   for net in ${bridges//,/ }; do
-    br="${tb}-${net}"
+    [ -n "$skip_unique_bridge_names" ] && br="$net" || br="${tb}-${net}"
     echo "  -- Bridge: $br"
     network_args="${network_args} --network=bridge=$br"
 
@@ -166,7 +170,10 @@ fi
 echo "Network args: $network_args"
 echo
 
-virt-install \
+# Efi or Legacy boot
+[ -n "$efi" ] && boot_args="--boot uefi"
+
+$cmd virt-install \
   --connect qemu:///system \
   --machine q35 --virt-type kvm \
   --iommu intel,driver.intremap=on,driver.caching_mode=on,driver.eim=on \
@@ -183,7 +190,9 @@ virt-install \
   --controller type=virtio-serial,driver.iommu=on \
   --console=pty,target_type=serial \
   ${network_args} \
-  ${extra_args}
+  ${extra_args} || die "Launching VM had failed"
+
+[ -n "$DEBUG" ] && exit
 
 echo
 echo -n "VM $uname running ... "
